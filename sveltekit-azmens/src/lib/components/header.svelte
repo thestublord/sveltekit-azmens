@@ -110,11 +110,9 @@
 
 <style>
 	header {
-		background: linear-gradient(45deg, rgb(89, 89, 89) 1%, #793434 0);
 		background-position: fixed; /* Add fixed background position */
 		color: white;
-		padding: 1rem; /* Add padding to the header */
-		height: 60px; /* Fixed height */
+		padding: 2rem; /* Add padding to the header */
 	}
 	.header-content {
 		display: flex;
@@ -135,10 +133,10 @@
 	}
 
 	.navigation {
-		background-color: #ccc;
+		background-color: #793434;
 		padding: 10px;
 		margin-bottom: 10px;
-		height: 12px;
+		height: 18px;
 		align-items: center;
 	}
 
@@ -187,25 +185,34 @@
 		width: 100%;
 	}
 
-	.toolbar {
-		display: flex;
-		align-items: center;
-		cursor: pointer;
-		margin-left: auto; /* Align the toolbar to the right */
+	@media screen and (min-width: 500px) {
+		header {
+			background: linear-gradient(45deg, rgb(89, 89, 89) 30%, #793434 0);
+
+			color: white;
+			padding: 1rem; /* Add padding to the header */
+			height: 60px; /* Fixed height */
+		}
 	}
 
-	.menu-icon {
-		width: 30px;
-		height: 20px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+	nav ul {
+		display: flex; /* Keep navigation links horizontally aligned */
+		justify-content: center; /* Center navigation links */
+		gap: 1rem; /* Adjust spacing between navigation links */
 	}
 
-	.menu-icon div {
-		width: 100%;
-		height: 4px;
-		background-color: #ccc;
+	nav li {
+		margin: 0 1rem; /* Add margin around navigation links */
+	}
+
+	@media screen and (min-width: 800px) {
+		header {
+			background: linear-gradient(45deg, rgb(89, 89, 89) 400%, #793434 0);
+
+			color: white;
+			padding: 1rem; /* Add padding to the header */
+			height: 60px; /* Fixed height */
+		}
 	}
 
 	/* Adjustments for mobile devices */
@@ -216,12 +223,12 @@
 
 		nav ul {
 			display: flex; /* Keep navigation links horizontally aligned */
-			justify-content: center; /* Center navigation links horizontally */
-			gap: 1rem; /* Adjust spacing between navigation links */
+			justify-content: flex-start; /* Align navigation links to the start (left) */
+			gap: 0.2rem; /* Adjust spacing between navigation links */
 		}
 
 		nav li {
-			margin: 0 1rem; /* Add margin around navigation links */
+			margin: 0 0.2rem; /* Add margin around navigation links */
 		}
 
 		.left-image {
@@ -238,29 +245,11 @@
 		}
 
 		header {
-			background: linear-gradient(45deg, rgb(89, 89, 89) 22%, #793434 0);
+			background: linear-gradient(45deg, rgb(89, 89, 89) 50%, #793434 0);
 			background-position: fixed; /* Add fixed background position */
 			color: white;
 			padding: 1rem; /* Add padding to the header */
 			height: 60px; /* Fixed height */
-		}
-
-		.logo-container {
-			display: flex;
-			flex-direction: row; /* Arrange items vertically */
-			align-items: center; /* Center items horizontally */
-			justify-content: space-between; /* Space items evenly */
-		}
-
-		.header-content {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			font-size: 40px; /* Adjust font size of the header */
-			text-align: center;
-			height: 60px; /* Fixed height */
-			overflow: hidden; /* Prevent content from overflowing */
-			background-position: fixed; /* Add fixed background position */
 		}
 	}
 
@@ -268,12 +257,6 @@
 
 	/* Show navigation-header and hide .navigation at 2000px */
 	@media screen and (min-width: 1250px) {
-		.logo-and-navigation-container {
-			display: flex;
-			justify-content: space-between;
-			align-items: center; /* Align items vertically in the center */
-		}
-
 		.navigation-header {
 			display: block; /* Show navigation-header */
 			font-size: 40px; /* Adjust font size of the navigation links */
@@ -284,47 +267,7 @@
 		}
 
 		header {
-			background: linear-gradient(45deg, rgb(89, 89, 89) 10%, #793434 0);
-			background-position: fixed; /* Add fixed background position */
-			color: white;
-			padding: 1rem; /* Add padding to the header */
-			height: 60px; /* Fixed height */
-		}
-	}
-
-	@media screen and (min-width: 2000px) {
-		header {
-			background: linear-gradient(45deg, rgb(89, 89, 89) 10%, #793434 0);
-			background-position: fixed; /* Add fixed background position */
-			color: white;
-			padding: 1rem; /* Add padding to the header */
-			height: 60px; /* Fixed height */
-		}
-	}
-
-	@media screen and (min-width: 200px) {
-		header {
-			background: linear-gradient(45deg, rgb(89, 89, 89) 40%, #793434 0);
-
-			color: white;
-			padding: 1rem; /* Add padding to the header */
-			height: 60px; /* Fixed height */
-		}
-	}
-
-	@media screen and (min-width: 3000px) {
-		header {
-			background: linear-gradient(45deg, rgb(89, 89, 89) 20%, #793434 0);
-			background-position: fixed; /* Add fixed background position */
-			color: white;
-			padding: 1rem; /* Add padding to the header */
-			height: 60px; /* Fixed height */
-		}
-	}
-
-	@media screen and (min-width: 4000px) {
-		header {
-			background: linear-gradient(45deg, rgb(89, 89, 89) 10%, #793434 0);
+			background: linear-gradient(45deg, rgb(89, 89, 89) 50%, #793434 0);
 			background-position: fixed; /* Add fixed background position */
 			color: white;
 			padding: 1rem; /* Add padding to the header */
