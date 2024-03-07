@@ -42,7 +42,7 @@
 			</a>
 			<!-- Position the text under the image -->
 			<div class="header-text">
-				<h1>AMGA</h1>
+				<h1>Arizona<br />Mens<br />Gymnastics<br />Association</h1>
 			</div>
 		</div>
 
@@ -112,7 +112,7 @@
 	header {
 		background-position: fixed; /* Add fixed background position */
 		color: white;
-		padding: 2rem; /* Add padding to the header */
+		padding: 1rem; /* Add padding to the header */
 	}
 	.header-content {
 		display: flex;
@@ -123,6 +123,7 @@
 		height: 60px; /* Fixed height */
 		overflow: hidden; /* Prevent content from overflowing */
 		background-position: fixed; /* Add fixed background position */
+		width: 100%; /* Span the entire width */
 	}
 
 	.logo-container {
@@ -205,6 +206,10 @@
 		margin: 0 1rem; /* Add margin around navigation links */
 	}
 
+	.header-text h1 {
+		font-size: 15px; /* Reduce font size of header text for smaller screens */
+	}
+
 	@media screen and (min-width: 800px) {
 		header {
 			background: linear-gradient(45deg, rgb(89, 89, 89) 400%, #793434 0);
@@ -241,7 +246,7 @@
 		}
 
 		.header-text h1 {
-			font-size: 16px; /* Reduce font size of header text for smaller screens */
+			font-size: 15px; /* Reduce font size of header text for smaller screens */
 		}
 
 		header {
@@ -264,6 +269,10 @@
 
 		.navigation {
 			display: none; /* Hide .navigation */
+		}
+
+		.header-text h1 {
+			font-size: 15px; /* Reduce font size of header text for smaller screens */
 		}
 
 		header {

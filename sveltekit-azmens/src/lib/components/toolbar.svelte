@@ -66,28 +66,43 @@
 	}
 
 	.navigation {
-		background-color: #f8f9fa;
+		position: fixed; /* Make the navigation menu fixed */
+		top: 105px; /* Position the navigation menu under the header */
+		right: 0; /* Align the right edge with the right edge of the viewport */
+		bottom: 150px; /* Align the bottom edge with the bottom edge of the viewport, leaving space for the footer */
+		left: 0; /* Align the left edge with the left edge of the viewport */
+		background-color: rgba(75, 39, 39, 0.8); /* Add opacity */
+		display: flex; /* Make the navigation menu a flex container */
+		justify-content: center; /* Center the content horizontally */
+		align-items: center; /* Center the content vertically */
+		padding-bottom: 50%; /* Add some bottom padding */
+		transition: all 0.5s ease; /* Add a transition */
 	}
 
 	.navigation ul {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+		display: flex; /* Make the list items display in a flex layout */
+		flex-direction: column; /* Stack the list items vertically */
+		align-items: center; /* Center the list items horizontally */
 	}
-
 	.navigation li button {
 		display: block;
-		color: black;
+		background: #793434; /* Change the background color here */
+		color: white;
 		text-align: center;
-		padding: 14px 16px;
+		padding: 30px 60px; /* Increase left and right padding to make the buttons wider */
+		font-size: 20px; /* Increase the font size */
 		text-decoration: none;
-		background: none;
-		border: none;
+		border: 2px solid rgb(89, 89, 89); /* Add a border */
+		border-radius: 10px; /* Add rounded edges */
 		cursor: pointer;
+		margin: 0 auto 10px; /* Remove top margin to position the links right on top of each other */
 	}
 
 	.navigation li button:hover {
-		background-color: #ddd;
+		background-color: rgb(89, 89, 89);
 	}
 
 	@media screen and (max-width: 900px) {

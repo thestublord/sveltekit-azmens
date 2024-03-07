@@ -9,8 +9,8 @@
 
 <style>
 	footer {
-		background-color: rgba(204, 204, 204, 0.5); /* Use rgba to specify the opacity */
-		padding: 35px;
+		background-color: rgba(47, 47, 47, 0.5); /* Use rgba to specify the opacity */
+		padding: 30px;
 		text-align: center;
 	}
 
@@ -22,12 +22,24 @@
 	.footer-image {
 		width: 100px;
 		height: 100px;
-		margin: 0 10px;
+		margin: 0 20px;
 	}
 
 	.footer-image-4 {
 		width: 200px;
 		height: 100px;
 		object-fit: cover;
+	}
+
+	@media (max-width: 900px) {
+		.footer-image {
+			width: 75px;
+			height: 75px;
+		}
+
+		.footer-image-4 {
+			width: 125px;
+			height: 75px;
+		}
 	}
 </style>

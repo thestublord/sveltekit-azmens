@@ -45,7 +45,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-image: url('/images/pexels-tom-fisk-11419474.jpg'); /* Path to your background image */
+		background-image: linear-gradient(to right, #f3f3f3, #e0e0e0); /* Light gray gradient */
 		background-size: cover; /* Cover the entire container */
 		background-position: center; /* Center the background image */
 		opacity: 2; /* Opacity of the background image */
