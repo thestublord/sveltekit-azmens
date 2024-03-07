@@ -61,14 +61,4 @@
 		background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
 		z-index: -2; /* Ensure the overlay is behind the main content */
 	}
-
-	body {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex-grow: 1;
-	}
 </style>

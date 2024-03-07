@@ -30,52 +30,51 @@
 <header>
 	<div class="header-content">
 		<!-- Wrap the image, text, and navigation inside a container -->
-		<div class="logo-and-navigation-container">
-			<!-- Wrap the image and text inside a container -->
-			<div class="logo-container">
-				<!-- Wrap the image inside an anchor tag -->
-				<a href="/" aria-label="Navigate to Home">
-					<img
-						src="/images/abc073496eab0773f7be106681d7613d.jpeg"
-						alt="Arizona Men's Gymnastics Association Logo"
-						class="left-image"
-					/>
-				</a>
-				<!-- Position the text under the image -->
-				<div class="header-text">
-					<h1>AMGA</h1>
-				</div>
-			</div>
-			<div class="nav-text">
-				<nav class="navigation-header">
-					<ul>
-						<li>
-							<button type="button" on:click={navigateToHome} on:keydown={navigateToHome}
-								>Home</button
-							>
-						</li>
-						<li>
-							<button type="button" on:click={navigateToEvents} on:keydown={navigateToEvents}
-								>Events</button
-							>
-						</li>
-						<li>
-							<button type="button" on:click={navigateToCalendar} on:keydown={navigateToCalendar}
-								>Calendar</button
-							>
-						</li>
-						<li>
-							<button
-								type="button"
-								on:click={navigateToImportantLinks}
-								on:keydown={navigateToImportantLinks}>Important Links</button
-							>
-						</li>
-						<!-- Add more navigation links as needed -->
-					</ul>
-				</nav>
+
+		<div class="logo-container">
+			<!-- Wrap the image inside an anchor tag -->
+			<a href="/" aria-label="Navigate to Home">
+				<img
+					src="/images/abc073496eab0773f7be106681d7613d.jpeg"
+					alt="Arizona Men's Gymnastics Association Logo"
+					class="left-image"
+				/>
+			</a>
+			<!-- Position the text under the image -->
+			<div class="header-text">
+				<h1>AMGA</h1>
 			</div>
 		</div>
+
+		<nav class="navigation-header">
+			<div class="nav-button-header">
+				<ul>
+					<li>
+						<button type="button" on:click={navigateToHome} on:keydown={navigateToHome}>Home</button
+						>
+					</li>
+					<li>
+						<button type="button" on:click={navigateToEvents} on:keydown={navigateToEvents}
+							>Events</button
+						>
+					</li>
+					<li>
+						<button type="button" on:click={navigateToCalendar} on:keydown={navigateToCalendar}
+							>Calendar</button
+						>
+					</li>
+					<li>
+						<button
+							type="button"
+							on:click={navigateToImportantLinks}
+							on:keydown={navigateToImportantLinks}>Important Links</button
+						>
+					</li>
+					<!-- Add more navigation links as needed -->
+				</ul>
+			</div>
+		</nav>
+
 		<Toolbar />
 	</div>
 </header>
@@ -111,44 +110,40 @@
 
 <style>
 	header {
-		background-color: #793434;
+		background: linear-gradient(45deg, rgb(89, 89, 89) 1%, #793434 0);
+		background-position: fixed; /* Add fixed background position */
 		color: white;
-		padding: 1rem;
+		padding: 1rem; /* Add padding to the header */
+		height: 60px; /* Fixed height */
 	}
-
 	.header-content {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		font-size: 8px; /* Adjust font size of the header */
 		text-align: center;
+		height: 60px; /* Fixed height */
+		overflow: hidden; /* Prevent content from overflowing */
+		background-position: fixed; /* Add fixed background position */
 	}
 
 	.logo-container {
 		display: flex;
-		flex-direction: column; /* Arrange items vertically */
+		flex-direction: row; /* Arrange items vertically */
 		align-items: center; /* Center items horizontally */
+		justify-content: space-between; /* Space items evenly */
 	}
 
 	.navigation {
 		background-color: #ccc;
 		padding: 10px;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
+		height: 12px;
+		align-items: center;
 	}
 
 	.navigation-header {
 		display: none;
-	}
-
-	.navigation-header ul {
-		list-style-type: none;
-		padding: 0;
-		margin: 0;
-		display: flex;
-		justify-content: space-around;
-		gap: 1rem;
-		font-size: 30px;
-		margin-left: auto; /* Push the links to the right */
 	}
 
 	nav ul {
@@ -167,7 +162,7 @@
 	nav button {
 		background: none;
 		border: none;
-		color: rgb(16, 12, 12);
+		color: white;
 		font-size: 18px;
 		cursor: pointer;
 		text-decoration: none;
@@ -179,11 +174,11 @@
 	}
 
 	.left-image {
-		width: 100px; /* Adjust size as needed */
+		width: 80px; /* Adjust size as needed */
 		height: auto; /* Maintain aspect ratio */
 		margin-top: 10px; /* Adjust top margin to create space */
 		margin-bottom: 10px; /* Adjust bottom margin to create space */
-		margin-right: auto; /* Align the left image to the left */
+		margin-right: 20px; /* Align the left image to the left */
 		margin-left: 0; /* Align the left image to the left */
 	}
 
@@ -215,10 +210,6 @@
 
 	/* Adjustments for mobile devices */
 	@media only screen and (max-width: 900px) {
-		header {
-			padding: 1rem; /* Reduce header padding for smaller screens */
-		}
-
 		.navigation {
 			display: none; /* Hide the navigation links */
 		}
@@ -239,17 +230,37 @@
 
 		.header-text {
 			text-align: center; /* Center header text for smaller screens */
+			margin-left: 20px;
 		}
 
 		.header-text h1 {
-			font-size: 20px; /* Reduce font size of header text for smaller screens */
+			font-size: 16px; /* Reduce font size of header text for smaller screens */
 		}
-	}
 
-	/* Adjustments for full-screen mode */
-	@media screen and (min-width: 1024px) {
 		header {
-			padding: 1rem; /* Reduce header padding for full-screen mode */
+			background: linear-gradient(45deg, rgb(89, 89, 89) 22%, #793434 0);
+			background-position: fixed; /* Add fixed background position */
+			color: white;
+			padding: 1rem; /* Add padding to the header */
+			height: 60px; /* Fixed height */
+		}
+
+		.logo-container {
+			display: flex;
+			flex-direction: row; /* Arrange items vertically */
+			align-items: center; /* Center items horizontally */
+			justify-content: space-between; /* Space items evenly */
+		}
+
+		.header-content {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 40px; /* Adjust font size of the header */
+			text-align: center;
+			height: 60px; /* Fixed height */
+			overflow: hidden; /* Prevent content from overflowing */
+			background-position: fixed; /* Add fixed background position */
 		}
 	}
 
@@ -270,6 +281,54 @@
 
 		.navigation {
 			display: none; /* Hide .navigation */
+		}
+
+		header {
+			background: linear-gradient(45deg, rgb(89, 89, 89) 10%, #793434 0);
+			background-position: fixed; /* Add fixed background position */
+			color: white;
+			padding: 1rem; /* Add padding to the header */
+			height: 60px; /* Fixed height */
+		}
+	}
+
+	@media screen and (min-width: 2000px) {
+		header {
+			background: linear-gradient(45deg, rgb(89, 89, 89) 10%, #793434 0);
+			background-position: fixed; /* Add fixed background position */
+			color: white;
+			padding: 1rem; /* Add padding to the header */
+			height: 60px; /* Fixed height */
+		}
+	}
+
+	@media screen and (min-width: 200px) {
+		header {
+			background: linear-gradient(45deg, rgb(89, 89, 89) 40%, #793434 0);
+
+			color: white;
+			padding: 1rem; /* Add padding to the header */
+			height: 60px; /* Fixed height */
+		}
+	}
+
+	@media screen and (min-width: 3000px) {
+		header {
+			background: linear-gradient(45deg, rgb(89, 89, 89) 20%, #793434 0);
+			background-position: fixed; /* Add fixed background position */
+			color: white;
+			padding: 1rem; /* Add padding to the header */
+			height: 60px; /* Fixed height */
+		}
+	}
+
+	@media screen and (min-width: 4000px) {
+		header {
+			background: linear-gradient(45deg, rgb(89, 89, 89) 10%, #793434 0);
+			background-position: fixed; /* Add fixed background position */
+			color: white;
+			padding: 1rem; /* Add padding to the header */
+			height: 60px; /* Fixed height */
 		}
 	}
 </style>
