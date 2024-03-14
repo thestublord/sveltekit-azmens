@@ -30,7 +30,7 @@
 		<div></div>
 	</div>
 	{#if showLinks}
-		<nav class="navigation">
+		<nav class="navigation-toolbar">
 			<ul>
 				<li><button type="button" on:click={navigateToHome}>Home</button></li>
 				<li><button type="button" on:click={navigateToEvents}>Events</button></li>
@@ -62,31 +62,18 @@
 	.menu-icon div {
 		width: 100%;
 		height: 4px;
-		background-color: #ccc;
+		background-color: #146b7f;
 	}
 
-	.navigation {
-		position: fixed; /* Make the navigation menu fixed */
-		top: 105px; /* Position the navigation menu under the header */
-		right: 0; /* Align the right edge with the right edge of the viewport */
-		bottom: 150px; /* Align the bottom edge with the bottom edge of the viewport, leaving space for the footer */
-		left: 0; /* Align the left edge with the left edge of the viewport */
-		background-color: rgba(75, 39, 39, 0.8); /* Add opacity */
-		display: flex; /* Make the navigation menu a flex container */
-		justify-content: center; /* Center the content horizontally */
-		align-items: center; /* Center the content vertically */
-		padding-bottom: 50%; /* Add some bottom padding */
-		transition: all 0.5s ease; /* Add a transition */
+	.navigation-toolbar {
+		/* Remove position: absolute; */
+		top: 60px; /* Adjust as needed */
+		right: 0;
+		background: #146b7f;
+		width: 100%;
+		text-align: center;
 	}
 
-	.navigation ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		display: flex; /* Make the list items display in a flex layout */
-		flex-direction: column; /* Stack the list items vertically */
-		align-items: center; /* Center the list items horizontally */
-	}
 	.navigation li button {
 		display: block;
 		background: #793434; /* Change the background color here */
@@ -95,14 +82,17 @@
 		padding: 30px 60px; /* Increase left and right padding to make the buttons wider */
 		font-size: 20px; /* Increase the font size */
 		text-decoration: none;
-		border: 2px solid rgb(89, 89, 89); /* Add a border */
+		border: 2px solid #f75001; /* Add a border */
 		border-radius: 10px; /* Add rounded edges */
 		cursor: pointer;
 		margin: 0 auto 10px; /* Remove top margin to position the links right on top of each other */
 	}
 
 	.navigation li button:hover {
-		background-color: rgb(89, 89, 89);
+		background-color: #f75001;
+	}
+	.menu-icon div:hover {
+		background-color: #f75001;
 	}
 
 	@media screen and (max-width: 900px) {

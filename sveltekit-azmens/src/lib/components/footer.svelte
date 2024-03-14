@@ -1,9 +1,13 @@
 <footer>
 	<div class="footer-images">
-		<img src="/images/download.png" alt="Footer Image 1" class="footer-image" />
-		<img src="/images/usag-region1-clr-w750-o.jpg" alt="Footer Image 2" class="footer-image" />
-		<img src="/images/r1-logo-updated-2023-w652-o.jpg" alt="Footer Image 3" class="footer-image" />
-		<img src="/images/logo-2.png" alt="Footer Image 4" class="footer-image footer-image-4" />
+		<img src="/images/download.png" alt="FIG" class="footer-image" />
+		<img src="/images/usag-region1-clr-w750-o.jpg" alt="USA Gymnastics" class="footer-image" />
+		<img src="/images/r1-logo-updated-2023-w652-o.jpg" alt="Region One" class="footer-image" />
+		<img
+			src="/images/logo-2.png"
+			alt="National Gymnastics Judges Association"
+			class="footer-image-4"
+		/>
 	</div>
 </footer>
 
