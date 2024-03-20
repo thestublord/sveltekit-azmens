@@ -1,6 +1,5 @@
 <script>
 	import Header from '$lib/components/header.svelte';
-
 	import { onMount } from 'svelte';
 	import Toolbar from '../lib/components/toolbar.svelte';
 
@@ -11,9 +10,11 @@
 	});
 </script>
 
-<div class="layout">
+<div class="header">
 	<Header />
-	<Toolbar />
+</div>
+<Toolbar />
+<div class="layout">
 	<main>
 		<slot />
 
@@ -33,7 +34,7 @@
 		flex-grow: 1;
 		padding: 1rem;
 		text-align: center;
-		color: rgb(90, 9, 9); /* Set text color to white */
+		color: #000000; /* Set text color to white */
 	}
 
 	/* Adjustments to the background image */
@@ -44,8 +45,8 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100%;
-		background-color: #fff8e0; /* Add # before the color code */
+		height: 250%; /* Adjust this value as needed */
+		background-color: #d4d4d4; /* Add # before the color code */
 		background-size: cover; /* Cover the entire container */
 		background-position: center; /* Center the background image */
 		opacity: 2; /* Opacity of the background image */

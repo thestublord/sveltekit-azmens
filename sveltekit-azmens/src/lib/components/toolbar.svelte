@@ -46,7 +46,7 @@
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-		padding: 10px;
+		padding: 40px;
 		cursor: pointer;
 		display: none; /* Hide the toolbar by default */
 	}
@@ -62,14 +62,14 @@
 	.menu-icon div {
 		width: 100%;
 		height: 4px;
-		background-color: #146b7f;
+		background-color: #fdfdfd;
 	}
 
 	.navigation-toolbar {
-		/* Remove position: absolute; */
-		top: 60px; /* Adjust as needed */
+		position: absolute; /* Add this line */
+		top: 70px; /* Adjust this value as needed */
 		right: 0;
-		background: #146b7f;
+		background: #146a83;
 		width: 100%;
 		text-align: center;
 	}
@@ -77,7 +77,7 @@
 	.navigation li button {
 		display: block;
 		background: #793434; /* Change the background color here */
-		color: white;
+		color: #fe545d;
 		text-align: center;
 		padding: 30px 60px; /* Increase left and right padding to make the buttons wider */
 		font-size: 20px; /* Increase the font size */
@@ -89,10 +89,10 @@
 	}
 
 	.navigation li button:hover {
-		background-color: #f75001;
+		background-color: #fe545d;
 	}
 	.menu-icon div:hover {
-		background-color: #f75001;
+		background-color: #fe545d;
 	}
 
 	@media screen and (max-width: 900px) {

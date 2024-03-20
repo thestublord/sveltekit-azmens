@@ -1,17 +1,17 @@
 <div class="events-container">
 	<div class="new-events">
 		<a href="http://www.mensregion1champ.com/">
-			<img src="/images/My first design (10).png" alt="Slide 1" />
+			<img src="/images/14k.png" alt="Slide 1" />
 		</a>
 	</div>
 	<div class="new-events">
 		<a href="https://usagym.org/events/2024-mens-western-championships/">
-			<img src="/images/ezgif-6-470b8d7d72.jpg" alt="Slide 2" />
+			<img src="/images/westerns.png" alt="Slide 2" />
 		</a>
 	</div>
 	<div class="new-events">
 		<a href="https://usagym.org/events/2024-mens-development-program-national-championships/">
-			<img src="/images/ezgif-6-51a5568cf5.jpg" alt="Slide 3" />
+			<img src="/images/nationals.png" alt="Slide 3" />
 		</a>
 	</div>
 </div>
@@ -26,7 +26,7 @@
 
 	.new-events {
 		width: 30%;
-		margin: 10px;
+		margin: 20px 20px; /* Adjust this value as needed */
 	}
 
 	.new-events img {
@@ -42,7 +42,8 @@
 
 	@media (max-width: 900px) {
 		.new-events {
-			width: 100%;
+			width: 60%;
+			margin: 40px auto; /* Adjust this value as needed */
 		}
 	}
 </style>
