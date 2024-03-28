@@ -64,6 +64,14 @@
 		margin: 0; /* Remove default margins */
 	}
 
+	.content {
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* Center children vertically */
+		justify-content: space-between; /* Distribute space evenly between children */
+	}
+
 	.calendar-button {
 		display: inline-block;
 		padding: 10px 20px;
@@ -71,12 +79,9 @@
 		color: #fff;
 		text-decoration: none;
 		border-radius: 5px;
+		margin: 20px 0; /* Add some margin to the top and bottom */
 	}
 	.calendar-section {
-		padding: 20px;
-	}
-
-	.content {
 		padding: 20px;
 	}
 

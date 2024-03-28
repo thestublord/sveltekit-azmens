@@ -11,7 +11,7 @@
 	.videocontainer {
 		position: relative; /* Position the video container */
 		width: 100%; /* Full width */
-		height: 100vh; /* Full viewport height */
+		height: 70vh; /* Full viewport height */
 		overflow: hidden; /* Hide anything that exceeds the container */
 	}
 
@@ -21,7 +21,7 @@
 		object-fit: cover; /* Cover the entire area of the container */
 	}
 
-	@media screen and (max-width: 1200px) {
+	@media screen and (min-width: 1200px) {
 		/* Adjust the video container height for larger screens */
 		.videocontainer {
 			height: 65vh; /* Adjust the height as needed */
@@ -31,7 +31,7 @@
 	@media screen and (max-width: 900px) {
 		/* Adjust the video container height for medium screens */
 		.videocontainer {
-			height: 65vh; /* Adjust the height as needed */
+			height: 60vh; /* Adjust the height as needed */
 		}
 	}
 
