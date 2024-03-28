@@ -35,7 +35,7 @@
 				<li><button type="button" on:click={navigateToHome}>Home</button></li>
 				<li><button type="button" on:click={navigateToEvents}>Events</button></li>
 				<li><button type="button" on:click={navigateToCalendar}>Calendar</button></li>
-				<li><button type="button" on:click={navigateToImportantLinks}>Important Links</button></li>
+				<li><button type="button" on:click={navigateToImportantLinks}>More</button></li>
 			</ul>
 		</nav>
 	{/if}
@@ -46,7 +46,7 @@
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-		padding: 40px;
+		padding: 17px;
 		cursor: pointer;
 		display: none; /* Hide the toolbar by default */
 	}
@@ -61,38 +61,32 @@
 
 	.menu-icon div {
 		width: 100%;
-		height: 4px;
-		background-color: #fdfdfd;
+		height: 10%;
+		background-color: #f05454;
 	}
 
 	.navigation-toolbar {
 		position: absolute; /* Add this line */
-		top: 70px; /* Adjust this value as needed */
+		top: 100%; /* Adjust this value as needed */
 		right: 0;
-		background: #146a83;
+		background: #30475e;
 		width: 100%;
 		text-align: center;
+		border: 1px solid #f05454;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+		/* Add padding to the top and bottom */
+		padding: 10px 0;
 	}
 
-	.navigation li button {
-		display: block;
-		background: #793434; /* Change the background color here */
-		color: #fe545d;
-		text-align: center;
-		padding: 30px 60px; /* Increase left and right padding to make the buttons wider */
-		font-size: 20px; /* Increase the font size */
-		text-decoration: none;
-		border: 2px solid #f75001; /* Add a border */
-		border-radius: 10px; /* Add rounded edges */
-		cursor: pointer;
-		margin: 0 auto 10px; /* Remove top margin to position the links right on top of each other */
+	.navigation-toolbar li button {
+		color: #fff; /* Change the text color to white for better contrast */
 	}
 
 	.navigation li button:hover {
-		background-color: #fe545d;
+		background-color: #2614bf;
 	}
 	.menu-icon div:hover {
-		background-color: #fe545d;
+		background-color: #f05454;
 	}
 
 	@media screen and (max-width: 900px) {

@@ -1,57 +1,56 @@
-<header>
-	<div class="header-content">
-		<!-- Wrap the image, text, and navigation inside a container -->
-		<div class="logo-container">
-			<!-- Wrap the image inside an anchor tag -->
-			<a href="/" aria-label="Navigate to Home">
-				<img
-					src="/images/20k.png"
-					alt="Arizona Men's Gymnastics Association Logo"
-					class="left-image"
-				/>
-			</a>
-			<!-- Position the text under the image -->
-			<div class="header-text">
-				<h1>AZ<br />Men's<br />Gymnastics<br />Association</h1>
-			</div>
-		</div>
+<script>
+	import { goto } from '$app/navigation';
 
-		<nav class="navigation-header">
-			<ul>
-				<li>
-					<button type="button" on:click={navigateToHome} on:keydown={navigateToHome}>Home</button>
-				</li>
-				<li>
-					<button type="button" on:click={navigateToEvents} on:keydown={navigateToEvents}
-						>Events</button
-					>
-				</li>
-				<li>
-					<button type="button" on:click={navigateToCalendar} on:keydown={navigateToCalendar}
-						>Calendar</button
-					>
-				</li>
-				<li>
-					<button
-						type="button"
-						on:click={navigateToImportantLinks}
-						on:keydown={navigateToImportantLinks}>Important Links</button
-					>
-				</li>
-				<!-- Add more navigation links as needed -->
-			</ul>
-		</nav>
-	</div>
+	function navigateTo(path) {
+		return function (event) {
+			if (event.type === 'click' || (event.type === 'keydown' && event.key === 'Enter')) {
+				goto(path);
+			}
+		};
+	}
+</script>
+
+<header>
+	<nav class="navigation-header">
+		<ul>
+			<li>
+				<button type="button" on:click={navigateToHome} on:keydown={navigateToHome}>Home</button>
+			</li>
+			<li>
+				<button type="button" on:click={navigateToEvents} on:keydown={navigateToEvents}
+					>Events</button
+				>
+			</li>
+			<li>
+				<button type="button" on:click={navigateToCalendar} on:keydown={navigateToCalendar}
+					>Calendar</button
+				>
+			</li>
+			<li>
+				<button
+					type="button"
+					on:click={navigateToImportantLinks}
+					on:keydown={navigateToImportantLinks}>Important Links</button
+				>
+			</li>
+			<!-- Add more navigation links as needed -->
+		</ul>
+	</nav>
 </header>
 
 <style>
-	header {
+	.header {
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100%;
-		background-color: #2f2f2f;
-		padding: 20px 0;
-		z-index: 100;
+		right: 0;
+		background-color: #2e2b3a;
+		color: #fdfdfd;
+		padding: 0.2rem;
+		height: auto; /* Fixed height changed to auto */
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16); /* Add this line */
 	}
 </style>

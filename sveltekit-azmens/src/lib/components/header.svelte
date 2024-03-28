@@ -1,4 +1,5 @@
 <script>
+	import Headerbig from './headerbig.svelte';
 	import Toolbar from './toolbar.svelte';
 	import { goto } from '$app/navigation';
 
@@ -11,22 +12,13 @@
 	}
 </script>
 
+<div class="nav-container">
+	<Toolbar />
+</div>
+
 <body>
 	<header class="header">
 		<div class="header-content">
-			<div class="logo-container">
-				<a href="/" aria-label="Navigate to Home">
-					<img
-						src="/images/20k.png"
-						alt="Arizona Men's Gymnastics Association Logo"
-						class="left-image"
-					/>
-				</a>
-				<div class="header-text">
-					<h1>AZ<br />Men's<br />Gymnastics<br />Association</h1>
-				</div>
-			</div>
-
 			<nav class="navigation-header">
 				<ul>
 					<li>
@@ -52,13 +44,11 @@
 						<button
 							type="button"
 							on:click={navigateTo('/important-links')}
-							on:keydown={navigateTo('/important-links')}>Important Links</button
+							on:keydown={navigateTo('/important-links')}>More</button
 						>
 					</li>
 				</ul>
 			</nav>
-
-			<Toolbar />
 		</div>
 	</header>
 
@@ -73,14 +63,21 @@
 			padding: 0;
 		}
 
+		.nav-container {
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+			margin-top: -10px; /* Move the nav-container up by 20px */
+		}
+
 		.header {
 			position: fixed;
 			top: 0;
 			left: 0;
 			right: 0;
-			background-color: #2e2b3a;
-			color: #fdfdfd;
-			padding: 0.2rem;
+			background-color: #222831;
+			color: #fff6e0;
+			padding: 0.5rem;
 			height: auto; /* Fixed height changed to auto */
 			display: flex;
 			align-items: center;
@@ -91,22 +88,15 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			font-size: 8px;
+
 			text-align: center;
 			width: 100%;
 		}
 
-		.logo-container {
-			display: flex;
-			flex-direction: row; /* Arrange items vertically */
-			align-items: center; /* Center items horizontally */
-			justify-content: space-between; /* Space items evenly */
-		}
-
 		.navigation-header {
-			z-index: 1; /* Make sure the navigation header is above other elements */
-			display: none; /* Hide navigation-header by default */
-			justify-content: flex-end; /* Add this line */
+			display: flex;
+			justify-content: center; /* Start in the middle by default */
+			width: 100%;
 		}
 
 		nav ul {
@@ -125,74 +115,49 @@
 			background: none;
 			border: none;
 			color: white;
-			font-size: 20px;
+			font-size: 18px;
 			cursor: pointer;
 			text-decoration: none;
-			padding: 0;
+			padding: 20;
 		}
 
 		nav button:hover {
-			color: #fe545d;
-		}
-		.left-image {
-			width: 70px; /* Adjust this value as needed */
-			height: auto; /* Maintain aspect ratio */
-			margin-right: 8px; /* Add this line */
-			float: left;
+			color: #f05454;
 		}
 
-		.header-text {
-			text-align: center;
-			width: 90%;
-			font-size: 0.8em; /* Add this line */
-			margin-right: 0;
+		.navigation-header ul {
+			display: flex;
+			justify-content: space-between; /* Distribute items evenly by default */
+			width: 100%;
 		}
 
 		@media screen and (min-width: 901px) {
 			.header {
 				position: static;
-				top: 0;
-				left: 0;
-				right: 0;
-				background-color: #2e2b3a;
-				color: #fdfdfd;
-				padding: 0.2rem;
-				height: 60px; /* Set a fixed height */
-		}
-			
+			}
 			.navigation-header {
-				z-index: 1; /* Make sure the navigation header is above other elements */
-				display: none; /* Hide navigation-header by default */
-				justify-content: flex-end; /* Add this line */
-			}
-
-			.header-text {
-				display: inline-block; /* Ensure the header text is displayed */
-			}
-
-			nav ul {
-				justify-content: center; /* Center the navigation links */
-			}
-
-			nav li {
-				margin: 0 2rem; /* Increase the margin */
+				display: flex;
+				justify-content: center; /* Start in the middle by default */
+				width: 100%;
 			}
 		}
 
 		@media screen and (max-width: 900px) {
-			.header-text {
-				display: none; /* Hide the header text */
+			.navigation-header {
+				display: none; /* Hide the navigation header by default */
 			}
 
 			.header {
-				position: fixed;
-				top: 0;
-				left: 0;
-				right: 0;
-				background-color: #2e2b3a;
-				color: #fdfdfd;
-				padding: 0.2rem;
-				height: 60px; /* Set a fixed height */
+				position: fixed; /* Fix the position at smaller screens */
+				top: 0; /* Align to the top of the viewport */
+				left: 0; /* Align to the left of the viewport */
+				width: 100%; /* Take up the full width of the viewport */
+			}
+		}
+		@media screen and (min-width: 1201px) {
+			.navigation-header ul {
+				justify-content: center; /* Center the navigation links */
+			}
 		}
 	</style>
 </body>
