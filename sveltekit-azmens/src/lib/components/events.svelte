@@ -5,18 +5,18 @@
 		</a>
 		<div class="event-text">
 			<p class="event-date">April 3 - 7</p>
-			<p class="event-title">2024 Men's Region 1 ​Gymnastics Championships​</p>
-			<p class="event-location">Mesa, Ariz.​</p>
+			<p class="event-title">2024 Men's Region 1 Championships​</p>
+			<p class="event-location">Mesa, Az.​</p>
 		</div>
 	</div>
 	<div class="new-events">
 		<a href="https://usagym.org/events/2024-mens-western-championships/">
-			<img src="/images/westerns2.png" alt="Slide 2" />
+			<img src="/images/westerns3.jpg" alt="Slide 2" />
 		</a>
 		<div class="event-text">
 			<p class="event-date">April 26 - 28</p>
 			<p class="event-title">2024 Men’s Western National Championships</p>
-			<p class="event-location">Chandler, Ariz.</p>
+			<p class="event-location">Chandler, Az.</p>
 		</div>
 	</div>
 	<div class="new-events">
@@ -25,8 +25,8 @@
 		</a>
 		<div class="event-text">
 			<p class="event-date">May 9 - 12</p>
-			<p class="event-title">2024 Men’s Development Program National Championships</p>
-			<p class="event-location">Daytona Beach, Fla.</p>
+			<p class="event-title">2024 Men’s National Championships</p>
+			<p class="event-location">Daytona Beach, Fl.</p>
 		</div>
 	</div>
 </div>
@@ -35,6 +35,10 @@
 	.event-text p {
 		font-size: 1.5em;
 		margin-bottom: 1em; /* Adjust this value as needed */
+	}
+
+	.event-text p:last-child {
+		margin-bottom: 0; /* Remove margin-bottom from the last paragraph */
 	}
 
 	.event-location {
@@ -48,7 +52,8 @@
 
 	.event-text {
 		padding: 30px; /* Add padding as needed */
-		border-top: 2px solid #ccc; /* Add a border to the top of the text */
+		border-top: 2px solid #30475e; /* Add a border to the top of the text */
+		background-color: #dddddd; /* Set the background color of the text area */
 	}
 
 	.event-date {
@@ -71,15 +76,16 @@
 		margin: 20px 20px; /* Adjust this value as needed */
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadow for card effect */
 		border-radius: 5px; /* Rounded corners */
-		background-color: #fff; /* Card background color */
+		background-color: #dddddd; /* Card background color */
 		overflow: hidden; /* Ensures the image doesn't overflow the rounded corners */
 	}
 
 	.new-events img {
 		width: 100%;
 		height: auto;
-		object-fit: cover;
-		transition: transform 0.3s ease; /* Add this line for smooth hover effect */
+		object-fit: contain; /* Changed from cover to contain */
+		transition: transform 0.3s ease;
+		vertical-align: top; /* Add this line */
 	}
 
 	.new-events img:hover {

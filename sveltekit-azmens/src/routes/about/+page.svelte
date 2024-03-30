@@ -1,11 +1,6 @@
-<script>
-	import Calendar from '../../lib/components/calendar.svelte';
-	import Footer from '../../lib/components/footer.svelte';
-</script>
-
 <div class="pageHeader" style="background-color: #30475e;">
 	<div class="div1300">
-		<div class="pageHeaderTitle">Calendar</div>
+		<div class="pageHeaderTitle">About</div>
 		<div class="belowPageHeaderTitle"></div>
 	</div>
 </div>
@@ -13,8 +8,6 @@
 <div class="breadcrumb">
 	<!-- Breadcrumb content goes here -->
 </div>
-
-<Calendar />
 
 <style>
 	/* Add the following styles */

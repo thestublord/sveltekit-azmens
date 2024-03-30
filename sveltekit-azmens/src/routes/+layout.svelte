@@ -14,7 +14,7 @@
 <div class="header" style="z-index: 2;">
 	<Header />
 </div>
-<Toolbar />
+
 <div class="layout">
 	<main>
 		<slot />
@@ -29,8 +29,13 @@
 </div>
 
 <style>
+	/* Add the following styles */
+
+	.layout {
+		min-width: 400px; /* Prevent the main content from shrinking under 400px */
+	}
+
 	main {
-		flex-grow: 1;
 		text-align: center;
 		color: #dddddd; /* Set text color to white */
 	}
@@ -56,16 +61,16 @@
 	}
 
 	.header {
-		position: relative; /* Default position for larger screens */
-		z-index: 1; /* Ensure the header stays on top of other content */
+		position: relative;
+		z-index: 2; /* Ensure the header stays on top of other content */
 	}
 
 	@media (max-width: 900px) {
 		.header {
-			position: fixed; /* Fix the position at smaller screens */
-			top: 0; /* Align to the top of the viewport */
-			left: 0; /* Align to the left of the viewport */
-			width: 100%; /* Take up the full width of the viewport */
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
 		}
 	}
 </style>

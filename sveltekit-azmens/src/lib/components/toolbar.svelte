@@ -47,7 +47,7 @@
 		justify-content: flex-end;
 		align-items: center;
 		padding: 17px;
-		cursor: pointer;
+
 		display: none; /* Hide the toolbar by default */
 	}
 
@@ -61,7 +61,7 @@
 
 	.menu-icon div {
 		width: 100%;
-		height: 10%;
+		height: 20%;
 		background-color: #f05454;
 	}
 
@@ -75,18 +75,20 @@
 		border: 1px solid #f05454;
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 		/* Add padding to the top and bottom */
-		padding: 10px 0;
+		padding: 20px 0;
 	}
 
 	.navigation-toolbar li button {
 		color: #fff; /* Change the text color to white for better contrast */
+		cursor: pointer;
 	}
 
-	.navigation li button:hover {
-		background-color: #2614bf;
+	.navigation-toolbar li button:hover {
+		color: #222831;
 	}
 	.menu-icon div:hover {
-		background-color: #f05454;
+		background-color: #eeeeee;
+		cursor: pointer;
 	}
 
 	@media screen and (max-width: 900px) {

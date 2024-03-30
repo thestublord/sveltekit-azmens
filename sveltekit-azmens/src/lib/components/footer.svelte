@@ -4,9 +4,15 @@
 	</div>
 	<div class="breadcrumb">
 		<div class="footer-images">
-			<img src="/images/download.png" alt="FIG" class="footer-image" />
-			<img src="/images/usag-region1-clr-w750-o.jpg" alt="USA Gymnastics" class="footer-image" />
-			<img src="/images/r1-logo-updated-2023-w652-o.jpg" alt="Region One" class="footer-image" />
+			<a href="https://www.gymnastics.sport/site/" target="_blank">
+				<img src="/images/download.png" alt="FIG" class="footer-image" />
+			</a>
+			<a href="https://usagym.org/" target="_blank">
+				<img src="/images/usag-region1-clr-w750-o.jpg" alt="USA Gymnastics" class="footer-image" />
+			</a>
+			<a href="https://www.region1.men/" target="_blank">
+				<img src="/images/r1-logo-updated-2023-w652-o.jpg" alt="Region One" class="footer-image" />
+			</a>
 		</div>
 
 		<div class="breadcrumb-text">AZ Men's Gymnastics Association @ 2024.All Rights Reserved</div>
@@ -14,6 +20,10 @@
 </footer>
 
 <style>
+	footer {
+		min-width: 400px;
+	}
+
 	.breadcrumb1 {
 		padding: 22px;
 		background-color: #222831;

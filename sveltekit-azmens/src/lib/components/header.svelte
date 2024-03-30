@@ -1,162 +1,267 @@
 <script>
-	import Headerbig from './headerbig.svelte';
-	import Toolbar from './toolbar.svelte';
 	import { goto } from '$app/navigation';
 
+	let showMenu = false;
+
+	function toggleMenu() {
+		showMenu = !showMenu;
+	}
+
+	function hideMenu() {
+		showMenu = false;
+	}
+
 	function navigateTo(path) {
-		return function (event) {
-			if (event.type === 'click' || (event.type === 'keydown' && event.key === 'Enter')) {
-				goto(path);
-			}
-		};
+		goto(path);
+		hideMenu();
 	}
 </script>
 
-<div class="nav-container">
-	<Toolbar />
-</div>
-
 <body>
-	<header class="header">
-		<div class="header-content">
-			<nav class="navigation-header">
-				<ul>
-					<li>
-						<button type="button" on:click={navigateTo('/')} on:keydown={navigateTo('/')}
-							>Home</button
-						>
-					</li>
-					<li>
-						<button
-							type="button"
-							on:click={navigateTo('/events')}
-							on:keydown={navigateTo('/events')}>Events</button
-						>
-					</li>
-					<li>
-						<button
-							type="button"
-							on:click={navigateTo('/calendar')}
-							on:keydown={navigateTo('/calendar')}>Calendar</button
-						>
-					</li>
-					<li>
-						<button
-							type="button"
-							on:click={navigateTo('/important-links')}
-							on:keydown={navigateTo('/important-links')}>More</button
-						>
-					</li>
-				</ul>
-			</nav>
+	<header>
+		<div class="logo" on:click={() => navigateTo('/')}>AZMGA</div>
+		<nav>
+			<ul class="nav-links">
+				<li>
+					<button type="button" on:click={() => navigateTo('/')} on:keydown={() => navigateTo('/')}
+						>Home</button
+					>
+				</li>
+				<li>
+					<button
+						type="button"
+						on:click={() => navigateTo('/events')}
+						on:keydown={() => navigateTo('/events')}>Events</button
+					>
+				</li>
+				<li>
+					<button
+						type="button"
+						on:click={() => navigateTo('/calendar')}
+						on:keydown={() => navigateTo('/calendar')}>Calendar</button
+					>
+				</li>
+				<li class="more">
+					<button
+						type="button"
+						on:click={() => navigateTo('/important-links')}
+						on:keydown={() => navigateTo('/important-links')}>More</button
+					>
+					<ul class="submenu">
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div
+			class={showMenu ? 'hamburger show' : 'hamburger'}
+			on:click={toggleMenu}
+			on:keydown={toggleMenu}
+			role="button"
+			tabindex="0"
+		>
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
+
+		<div class={showMenu ? 'popup-menu show' : 'popup-menu'}>
+			<ul>
+				<li><button on:click={() => navigateTo('/events')}>Events</button></li>
+				<li><button on:click={() => navigateTo('/calendar')}>Calendar</button></li>
+				<li><button on:click={() => navigateTo('/contact')}>Contact</button></li>
+				<li><button on:click={() => navigateTo('/about')}>About</button></li>
+				<!-- Add more menu items as needed -->
+			</ul>
 		</div>
 	</header>
 
-	<main class="main-content">
-		<!-- Main content here -->
-	</main>
-
 	<style>
+		/* Add the following styles */
+
 		body,
 		html {
 			margin: 0;
 			padding: 0;
+			box-sizing: border-box;
 		}
 
-		.nav-container {
+		header {
 			display: flex;
-			justify-content: flex-end;
-			width: 100%;
-			margin-top: -10px; /* Move the nav-container up by 20px */
-		}
-
-		.header {
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px;
 			background-color: #222831;
-			color: #fff6e0;
-			padding: 0.5rem;
-			height: auto; /* Fixed height changed to auto */
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+			color: white;
 		}
 
-		.header-content {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-
-			text-align: center;
-			width: 100%;
-		}
-
-		.navigation-header {
-			display: flex;
-			justify-content: center; /* Start in the middle by default */
-			width: 100%;
+		.logo {
+			font-size: 18px;
+			cursor: pointer;
 		}
 
 		nav ul {
-			list-style-type: none;
-			padding: 0;
-			margin: 0;
+			list-style: none;
 			display: flex;
-			justify-content: space-around;
 		}
 
-		nav li {
-			margin: 0 1rem;
+		nav ul li {
+			margin-right: 25px;
 		}
 
-		nav button {
-			background: none;
-			border: none;
-			color: white;
-			font-size: 18px;
-			cursor: pointer;
+		nav ul li a {
 			text-decoration: none;
-			padding: 20;
+			color: white;
 		}
 
-		nav button:hover {
-			color: #f05454;
+		button {
+			background: none; /* Remove the background */
+			border: none; /* Remove the border */
+			color: white; /* Change the text color to white */
+
+			cursor: pointer; /* Change the cursor to a pointer when hovering over the text */
+			font-size: 18px; /* Increase the font size */
+			padding: 0; /* Remove the padding */
 		}
 
-		.navigation-header ul {
-			display: flex;
-			justify-content: space-between; /* Distribute items evenly by default */
-			width: 100%;
+		button:hover {
+			color: #f05454; /* Change the color when hovering over the button */
 		}
 
-		@media screen and (min-width: 901px) {
-			.header {
-				position: static;
+		/* Styling for the submenu */
+		.more:hover .submenu {
+			display: block;
+		}
+
+		.submenu {
+			display: none;
+			position: absolute;
+			background-color: #333;
+			padding: 15px;
+			z-index: 1;
+		}
+
+		.submenu li {
+			margin: 5px 0;
+		}
+
+		/* Styling for the hamburger menu */
+		.hamburger {
+			display: none;
+			flex-direction: column;
+			cursor: pointer;
+			position: relative;
+		}
+
+		.hamburger .line {
+			transition: all 0.3s ease;
+		}
+
+		.hamburger.show .line:nth-child(1) {
+			transform: rotate(-45deg) translate(-5px, 6px);
+		}
+
+		.hamburger.show .line:nth-child(2) {
+			opacity: 0;
+		}
+
+		.hamburger.show .line:nth-child(3) {
+			transform: rotate(45deg) translate(-5px, -6px);
+		}
+
+		.line {
+			width: 25px;
+			height: 3px;
+			background-color: white;
+			margin: 3px 0;
+		}
+
+		nav {
+			display: none;
+		}
+
+		nav.show {
+			display: block;
+		}
+
+		@keyframes rollDown {
+			0% {
+				transform: translateY(-100%);
 			}
-			.navigation-header {
+			100% {
+				transform: translateY(0);
+			}
+		}
+
+		.popup-menu {
+			padding-top: 110px; /* Add padding to the top */
+			position: fixed;
+			right: 0;
+			top: 60px; /* Height of the header */
+			bottom: 0; /* Stretch to the bottom */
+			width: 100%; /* Full width */
+			background-color: rgba(48, 71, 94, 0.9); /* Use rgba color model */
+			animation: rollDown 0.5s forwards; /* Add roll down animation */
+			display: none;
+			/* Add more styles as needed */
+		}
+
+		.popup-menu button {
+			width: 300px; /* Adjust as needed */
+			height: 100px; /* Adjust as needed */
+			margin-top: 0; /* Remove the space above the button */
+			margin-bottom: 0; /* Remove the space below the button */
+			margin-left: auto;
+			margin-right: auto;
+			display: block; /* Needed for margin auto to work */
+			background-color: #222831; /* Add the background color */
+			color: white; /* Add the text color */
+			border: 2px solid #dddddd; /* Add a 2px white border */
+			border-radius: 10px; /* Add roundness to the buttons */
+			opacity: 1; /* Keep the opacity as 1 */
+			transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+			/* Add more styles as needed */
+		}
+
+		.popup-menu button:hover {
+			background-color: #dddddd; /* Change the background color on hover */
+			color: #222831; /* Change the text color on hover */
+		}
+
+		.popup-menu.show {
+			display: block; /* Show the menu when the 'show' class is added */
+			animation: rollDown 0.5s forwards; /* Add roll down animation */
+		}
+
+		.popup-menu ul {
+			list-style-type: none; /* Remove the bullet points */
+			padding-left: 0; /* Remove the padding */
+		}
+
+		/* Media query for responsiveness */
+		@media (max-width: 900px) {
+			header {
+				padding: 20px; /* Increase the padding */
+			}
+			.nav-links {
+				display: none;
+			}
+
+			.hamburger {
 				display: flex;
-				justify-content: center; /* Start in the middle by default */
-				width: 100%;
 			}
 		}
 
-		@media screen and (max-width: 900px) {
-			.navigation-header {
-				display: none; /* Hide the navigation header by default */
+		@media (min-width: 900px) {
+			nav {
+				display: block;
 			}
 
-			.header {
-				position: fixed; /* Fix the position at smaller screens */
-				top: 0; /* Align to the top of the viewport */
-				left: 0; /* Align to the left of the viewport */
-				width: 100%; /* Take up the full width of the viewport */
-			}
-		}
-		@media screen and (min-width: 1201px) {
-			.navigation-header ul {
-				justify-content: center; /* Center the navigation links */
+			.hamburger,
+			.popup-menu,
+			.popup-menu.show {
+				display: none;
 			}
 		}
 	</style>

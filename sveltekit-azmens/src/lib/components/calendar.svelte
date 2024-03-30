@@ -1,6 +1,7 @@
 <div class="wrapper">
 	<div class="iframe-container">
 		<iframe
+			title="Google Calendar"
 			src="https://calendar.google.com/calendar/embed?src=azmgabackend%40gmail.com&ctz=America%2FPhoenix"
 			style="border: 0"
 			width="100%"
@@ -13,8 +14,7 @@
 
 <style>
 	.wrapper {
-		/* Removed height: 100vh; */
-		padding: 30px; /* Add space around the wrapper */
+		padding: 100px 30px 30px; /* top, right-left, bottom */
 		max-width: 1200px; /* Maximum width */
 		margin: auto; /* Center the container */
 	}

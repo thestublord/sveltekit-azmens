@@ -26,10 +26,13 @@
 		<Events />
 	</div>
 
-	<div class="calendar-section">
-		<button on:click={() => goto('/calendar')} class="calendar-button">Go to Calendar</button>
+	<div class="parallax2">
+		<div class="button-container">
+			<button on:click={() => goto('/calendar')} class="calendar-button">Go to Calendar</button>
+			<button on:click={() => goto('/contact')} class="calendar-button">Contact</button>
+			<button on:click={() => goto('/about')} class="calendar-button">About</button>
+		</div>
 	</div>
-	<div class="parallax2"></div>
 </div>
 
 <style>
@@ -56,7 +59,7 @@
 
 	.breadcrumb {
 		padding: 20px;
-		background-color: #30475e; /* Light grey background */
+		background-color: #30475e;
 		height: auto; /* Set height to auto to accommodate the h1 tag */
 	}
 
@@ -72,17 +75,42 @@
 		justify-content: space-between; /* Distribute space evenly between children */
 	}
 
+	.button-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* Center the buttons horizontally */
+		justify-content: center; /* Center the buttons vertically */
+		margin-top: 150px; /* Add a top margin to move the buttons lower */
+		gap: 60px; /* Add space between the buttons */
+	}
+
 	.calendar-button {
 		display: inline-block;
-		padding: 10px 20px;
-		background-color: #30475e;
-		color: #fff;
+		background-color: #222831; /* Add the background color */
+		color: white; /* Add the text color */
+		border: 2px solid #dddddd; /* Add a 2px white border */
+		border-radius: 10px; /* Add roundness to the buttons */
+		opacity: 1; /* Keep the opacity as 1 */
+		transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
 		text-decoration: none;
 		border-radius: 5px;
-		margin: 20px 0; /* Add some margin to the top and bottom */
+		padding: 20px 30px; /* Increase padding to make the button bigger */
+		font-size: 1.5em; /* Increase font size to make the text bigger */
+		justify-content: center; /* Center the buttons */
+		margin: 10px 0; /* Add some margin to the top and bottom */
+		width: 350px; /* Increase width to make the button bigger */
+		height: 80px;
 	}
-	.calendar-section {
-		padding: 20px;
+
+	.calendar-button:hover {
+		background-color: #dddddd; /* Change the background color on hover */
+		color: #222831; /* Change the text color on hover */
+	}
+
+	@media (min-width: 1200px) {
+		.calendar-button {
+			width: 300px; /* Set maximum width at 1200px breakpoint */
+		}
 	}
 
 	@media screen and (max-width: 1200px) {

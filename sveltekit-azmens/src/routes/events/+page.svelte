@@ -34,7 +34,7 @@
 		font-size: 4vw; /* Responsive font size */
 		line-height: 1.1; /* Adjust line height */
 		color: #fff;
-		text-align: left;
+		text-align: center;
 	}
 
 	@media screen and (max-width: 600px) {
