@@ -95,7 +95,7 @@
 		text-decoration: none;
 		border-radius: 5px;
 		padding: 20px 30px; /* Increase padding to make the button bigger */
-		font-size: 1.5em; /* Increase font size to make the text bigger */
+		font-size: 1.2em; /* Increase font size to make the text bigger */
 		justify-content: center; /* Center the buttons */
 		margin: 10px 0; /* Add some margin to the top and bottom */
 		width: 350px; /* Increase width to make the button bigger */
@@ -105,6 +105,18 @@
 	.calendar-button:hover {
 		background-color: #dddddd; /* Change the background color on hover */
 		color: #222831; /* Change the text color on hover */
+	}
+
+	@media (min-width: 900px) {
+		.calendar-button {
+			width: 300px; /* Set maximum width at 1200px breakpoint */
+		}
+	}
+
+	@media (min-width: 600px) {
+		.calendar-button {
+			width: 300px; /* Set maximum width at 1200px breakpoint */
+		}
 	}
 
 	@media (min-width: 1200px) {

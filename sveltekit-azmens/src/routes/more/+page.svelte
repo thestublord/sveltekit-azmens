@@ -1,6 +1,4 @@
 <script>
-	import Video from '../../lib/components/video.svelte';
-	import Pageheader from '../../lib/components/pageheader..svelte';
 	import Eventsimage from '../../lib/components/eventsimage.svelte';
 </script>
 

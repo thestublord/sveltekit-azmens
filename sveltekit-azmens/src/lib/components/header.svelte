@@ -33,11 +33,6 @@
 		<nav>
 			<ul class="nav-links">
 				<li>
-					<button type="button" on:click={() => navigateTo('/')} on:keydown={() => navigateTo('/')}
-						>Home</button
-					>
-				</li>
-				<li>
 					<button
 						type="button"
 						on:click={() => navigateTo('/events')}
@@ -52,14 +47,18 @@
 					>
 				</li>
 				<li class="more">
-					<button
-						type="button"
-						on:click={() => navigateTo('/important-links')}
-						on:keydown={() => navigateTo('/important-links')}>More</button
-					>
+					<button type="button">More</button>
 					<ul class="submenu">
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">About</a></li>
+						<button
+							type="button"
+							on:click={() => navigateTo('/contact')}
+							on:keydown={() => navigateTo('/contact')}>Contact</button
+						>
+						<button
+							type="button"
+							on:click={() => navigateTo('/about')}
+							on:keydown={() => navigateTo('/about')}>About</button
+						>
 					</ul>
 				</li>
 			</ul>
@@ -106,11 +105,14 @@
 			color: white;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
 			height: 40px; /* Fixed height */
+			position: relative; /* Add this line if not already present */
+			z-index: 2; /* Add this line */
 		}
 
 		.logo {
 			font-size: 18px;
 			cursor: pointer;
+			padding-left: 10px;
 		}
 
 		nav ul {
@@ -149,13 +151,16 @@
 		.submenu {
 			display: none;
 			position: absolute;
-			background-color: #333;
-			padding: 15px;
+			background-color: #222831;
+			padding: 20px;
 			z-index: 1;
+			margin-left: -35px;
+			border-radius: 100px;
+			border: 2px solid #dddddd;
 		}
 
 		.submenu li {
-			margin: 5px 0;
+			margin: 1px 0;
 		}
 
 		/* Styling for the hamburger menu */
@@ -164,6 +169,7 @@
 			flex-direction: column;
 			cursor: pointer;
 			position: relative;
+			padding-right: 10px;
 		}
 
 		.hamburger .line {

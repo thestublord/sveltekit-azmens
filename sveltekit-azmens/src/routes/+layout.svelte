@@ -30,9 +30,25 @@
 
 <style>
 	/* Add the following styles */
+	.background-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #516b77;
+		opacity: 0.5;
+		z-index: -1;
+	}
 
 	.layout {
-		min-width: 400px; /* Prevent the main content from shrinking under 400px */
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
+	.layout {
+		min-width: 300px; /* Prevent the main content from shrinking under 400px */
 	}
 
 	main {

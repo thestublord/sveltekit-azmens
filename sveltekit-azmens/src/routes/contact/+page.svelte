@@ -9,8 +9,73 @@
 	<!-- Breadcrumb content goes here -->
 </div>
 
+<div class="container">
+	<div class="card">
+		<p>
+			<strong>Email:</strong>
+			<a
+				href="mailto:
+
+			"
+			>
+				<!-- Email address goes here -->
+			</a>
+		</p>
+
+		<h1>Send us a message</h1>
+
+		<form class="form-container">
+			<div class="text">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required />
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required />
+
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required rows="5"></textarea>
+
+				<button type="submit">Send</button>
+			</div>
+		</form>
+	</div>
+</div>
+
 <style>
 	/* Add the following styles */
+
+	.container {
+		margin: 0 auto;
+		margin-top: 50px;
+		max-width: 900px;
+	}
+	.form-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	.form-container label,
+	.form-container input,
+	.form-container textarea,
+	.form-container button {
+		width: 100%;
+		margin-bottom: 10px;
+		box-sizing: border-box;
+	}
+
+	.card {
+		padding: 20px;
+		background-color: #dddddd;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+		border-radius: 10px;
+		max-width: 1200px;
+		margin: 0 auto;
+		color: #000;
+	}
 
 	.breadcrumb {
 		padding: 2px;
