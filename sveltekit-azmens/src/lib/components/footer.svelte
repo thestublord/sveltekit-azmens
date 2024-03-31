@@ -25,12 +25,12 @@
 	}
 
 	.breadcrumb1 {
-		padding: 22px;
+		padding: 12px;
 		background-color: #222831;
 	}
 
 	.breadcrumb {
-		padding: 50px;
+		padding: 18px;
 		background-color: #30475e;
 		display: flex;
 		justify-content: space-between;
@@ -39,7 +39,7 @@
 	}
 
 	.breadcrumb-text {
-		font-size: 1.2em;
+		font-size: 0.9em;
 		color: aliceblue;
 	}
 
@@ -56,7 +56,7 @@
 
 	@media (max-width: 1200px) {
 		.breadcrumb-text {
-			font-size: 1em;
+			font-size: 0.8em;
 		}
 	}
 
@@ -87,7 +87,7 @@
 		}
 
 		.breadcrumb-text {
-			font-size: 0.6em;
+			font-size: 0.8em;
 		}
 	}
 </style>

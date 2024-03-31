@@ -78,6 +78,8 @@
 		border-radius: 5px; /* Rounded corners */
 		background-color: #dddddd; /* Card background color */
 		overflow: hidden; /* Ensures the image doesn't overflow the rounded corners */
+		display: flex; /* Use Flexbox */
+		flex-direction: column; /* Stack the children vertically */
 	}
 
 	.new-events img {
@@ -86,6 +88,7 @@
 		object-fit: contain; /* Changed from cover to contain */
 		transition: transform 0.3s ease;
 		vertical-align: top; /* Add this line */
+		order: -1;
 	}
 
 	.new-events img:hover {
@@ -107,7 +110,7 @@
 
 	@media (min-width: 901px) and (max-width: 1199px) {
 		.new-events {
-			width: 45%;
+			width: 35%;
 		}
 
 		.events-container {
@@ -123,7 +126,7 @@
 		}
 
 		.new-events {
-			width: 75%;
+			width: 55%;
 			margin: 20px auto;
 		}
 

@@ -31,7 +31,7 @@
 
 	.pageHeaderTitle {
 		text-transform: uppercase;
-		font-size: 4vw; /* Responsive font size */
+		font-size: 5vw; /* Responsive font size */
 		line-height: 1.1; /* Adjust line height */
 		color: #fff;
 		text-align: center;
@@ -39,13 +39,13 @@
 
 	@media screen and (max-width: 600px) {
 		.pageHeaderTitle {
-			font-size: 5vw; /* Increase font size on small screens */
+			font-size: 6vw; /* Increase font size on small screens */
 		}
 	}
 
 	@media screen and (min-width: 601px) and (max-width: 1200px) {
 		.pageHeaderTitle {
-			font-size: 4vw; /* Decrease font size on medium screens */
+			font-size: 5vw; /* Decrease font size on medium screens */
 		}
 	}
 

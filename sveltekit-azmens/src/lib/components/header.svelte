@@ -15,6 +15,16 @@
 		goto(path);
 		hideMenu();
 	}
+
+	$: {
+		if (typeof document !== 'undefined') {
+			if (showMenu) {
+				document.body.style.overflow = 'hidden'; // Disable scrolling
+			} else {
+				document.body.style.overflow = 'auto'; // Enable scrolling
+			}
+		}
+	}
 </script>
 
 <body>
@@ -91,9 +101,11 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			padding: 10px;
+			padding: 5px;
 			background-color: #222831;
 			color: white;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+			height: 40px; /* Fixed height */
 		}
 
 		.logo {
@@ -198,12 +210,13 @@
 			padding-top: 110px; /* Add padding to the top */
 			position: fixed;
 			right: 0;
-			top: 60px; /* Height of the header */
+			top: 50px; /* Height of the header */
 			bottom: 0; /* Stretch to the bottom */
 			width: 100%; /* Full width */
 			background-color: rgba(48, 71, 94, 0.9); /* Use rgba color model */
 			animation: rollDown 0.5s forwards; /* Add roll down animation */
-			display: none;
+			display: none; /* Set a maximum height */
+			overflow-y: auto; /* Make it scrollable */
 			/* Add more styles as needed */
 		}
 
@@ -240,10 +253,7 @@
 		}
 
 		/* Media query for responsiveness */
-		@media (max-width: 900px) {
-			header {
-				padding: 20px; /* Increase the padding */
-			}
+		@media (max-width: 750px) {
 			.nav-links {
 				display: none;
 			}
@@ -253,7 +263,7 @@
 			}
 		}
 
-		@media (min-width: 900px) {
+		@media (min-width: 750px) {
 			nav {
 				display: block;
 			}

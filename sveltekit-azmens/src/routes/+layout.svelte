@@ -11,11 +11,11 @@
 	});
 </script>
 
-<div class="header" style="z-index: 2;">
-	<Header />
-</div>
-
 <div class="layout">
+	<div class="header" style="z-index: 2;">
+		<Header />
+	</div>
+
 	<main>
 		<slot />
 
@@ -63,14 +63,5 @@
 	.header {
 		position: relative;
 		z-index: 2; /* Ensure the header stays on top of other content */
-	}
-
-	@media (max-width: 900px) {
-		.header {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-		}
 	}
 </style>

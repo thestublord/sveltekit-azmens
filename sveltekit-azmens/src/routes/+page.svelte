@@ -86,9 +86,9 @@
 
 	.calendar-button {
 		display: inline-block;
-		background-color: #222831; /* Add the background color */
+		background-color: #30475e; /* Add the background color */
 		color: white; /* Add the text color */
-		border: 2px solid #dddddd; /* Add a 2px white border */
+		border: 2px solid #222831; /* Add a 2px white border */
 		border-radius: 10px; /* Add roundness to the buttons */
 		opacity: 1; /* Keep the opacity as 1 */
 		transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
@@ -131,6 +131,13 @@
 		/* Adjust the parallax height for smaller screens */
 		.parallax2 {
 			height: 720px; /* Adjust the height as needed */
+		}
+
+		.calendar-button {
+			width: 200px; /* Decrease width */
+			height: 60px; /* Decrease height */
+			padding: 10px 15px; /* Decrease padding */
+			font-size: 1em; /* Decrease font size */
 		}
 	}
 </style>
