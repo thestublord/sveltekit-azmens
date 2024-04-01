@@ -1,7 +1,6 @@
 <script>
 	import Header from '$lib/components/header.svelte';
 	import { onMount } from 'svelte';
-	import Toolbar from '../lib/components/toolbar.svelte';
 	import Footer from '../lib/components/footer.svelte';
 
 	onMount(() => {
