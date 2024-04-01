@@ -1,7 +1,3 @@
-<script>
-	import Eventsimage from '../../lib/components/eventsimage.svelte';
-</script>
-
 <div class="pageHeader" style="background-color: #30475e;">
 	<div class="div1300">
 		<div class="pageHeaderTitle">More</div>

@@ -28,7 +28,7 @@
 	}
 
 	.pageHeader {
-		padding: 50px 0;
+		padding: 0px 0;
 	}
 
 	.pageHeaderTitle {
