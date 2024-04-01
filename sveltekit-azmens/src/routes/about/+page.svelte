@@ -55,12 +55,6 @@
 		font-family: 'Arial', sans-serif;
 	}
 
-	.p {
-		margin-bottom: 20px; /* Add some space below the paragraph */
-		color: #30475e; /* Set the color of the paragraph */
-		font-size: 1em; /* Set the font size of the paragraph */
-	}
-
 	h2 {
 		color: #222831; /* Set the color of the heading */
 		font-size: 1.5em; /* Set the font size of the heading */
@@ -125,7 +119,7 @@
 	}
 
 	.pageHeader {
-		padding: 50px 0;
+		padding: 90px 0;
 	}
 
 	.pageHeaderTitle {
