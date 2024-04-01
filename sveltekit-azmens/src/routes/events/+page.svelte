@@ -1,7 +1,5 @@
 <script>
-	import Carousel from '../../lib/components/carousel.svelte';
 	import Events from '../../lib/components/events.svelte';
-	import Eventsimage from '../../lib/components/eventsimage.svelte';
 </script>
 
 <div class="pageHeader" style="background-color: #30475e;">
@@ -26,7 +24,7 @@
 	}
 
 	.pageHeader {
-		padding: 100px 0;
+		padding: 50px 0;
 	}
 
 	.pageHeaderTitle {

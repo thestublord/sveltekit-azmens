@@ -13,9 +13,7 @@
 	<!-- Breadcrumb content goes here -->
 </div>
 
-<div class="events-section">
-	<Eventsimage />
-</div>
+<div class="events-section"></div>
 
 <style>
 	/* Add the following styles */

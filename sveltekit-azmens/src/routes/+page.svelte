@@ -2,10 +2,6 @@
 	import { goto } from '$app/navigation';
 	import Events from '../lib/components/events.svelte';
 	import Video from '../lib/components/video.svelte';
-	import Calendar from '../lib/components/calendar.svelte';
-	import Footer from '../lib/components/footer.svelte';
-	import Homeimage from '../lib/components/homeimage.svelte';
-	import Eventsimage from '../lib/components/eventsimage.svelte';
 </script>
 
 <div class="wrapper">
@@ -17,13 +13,17 @@
 		<h1>Upcoming Events</h1>
 	</div>
 
-	<div class="breadcrumb1">
+	<div class="breadcrumb2">
 		<!-- Breadcrumb content goes here -->
 	</div>
 
 	<div class="events-section"></div>
 	<div class="content">
 		<Events />
+	</div>
+
+	<div class="breadcrumb1">
+		<!-- Breadcrumb content goes here -->
 	</div>
 
 	<div class="parallax2">
@@ -38,19 +38,29 @@
 <style>
 	/* Adjustments to the styles */
 
-	.wrapper {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-	}
-	.breadcrumb1 {
+	.breadcrumb2 {
 		padding: 2px;
 		background-color: #f05454; /* Light grey background */
 	}
 
+	h1 {
+		font-size: 2em; /* Default font size */
+	}
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		font-family: 'Arial', sans-serif;
+	}
+	.breadcrumb1 {
+		padding: 2px;
+		background-color: #222831; /* Light grey background */
+	}
+
 	.parallax2 {
 		background-image: url('/images/3.png');
-		height: 810px;
+		height: 600px;
 		background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -58,7 +68,7 @@
 	}
 
 	.breadcrumb {
-		padding: 20px;
+		padding: 10px;
 		background-color: #30475e;
 		height: auto; /* Set height to auto to accommodate the h1 tag */
 	}
@@ -80,8 +90,9 @@
 		flex-direction: column;
 		align-items: center; /* Center the buttons horizontally */
 		justify-content: center; /* Center the buttons vertically */
-		margin-top: 150px; /* Add a top margin to move the buttons lower */
-		gap: 60px; /* Add space between the buttons */
+		margin-top: 80px; /* Add a top margin to move the buttons lower */
+		gap: 20px; /* Add space between the buttons */
+		font-family: 'Arial', sans-serif;
 	}
 
 	.calendar-button {
@@ -107,43 +118,29 @@
 		color: #222831; /* Change the text color on hover */
 	}
 
-	@media (min-width: 900px) {
-		.calendar-button {
-			width: 300px; /* Set maximum width at 1200px breakpoint */
-		}
-	}
-
-	@media (min-width: 600px) {
-		.calendar-button {
-			width: 300px; /* Set maximum width at 1200px breakpoint */
-		}
-	}
-
-	@media (min-width: 1200px) {
-		.calendar-button {
-			width: 300px; /* Set maximum width at 1200px breakpoint */
-		}
-	}
-
 	@media screen and (max-width: 1200px) {
 		/* Adjust the parallax height for larger screens */
-		.parallax2 {
-			height: 810px; /* Adjust the height as needed */
+
+		h1 {
+			font-size: 2.2em; /* Smaller font size for larger screens */
 		}
 	}
 
 	@media screen and (max-width: 950px) {
 		/* Adjust the parallax height for medium screens */
-		.parallax2 {
-			height: 750px; /* Adjust the height as needed */
+
+		h1 {
+			font-size: 1.75em; /* Smaller font size for medium screens */
+		}
+
+		.calendar-button {
+			width: 250px; /* Set maximum width at 1200px breakpoint */
+			font-size: 1em; /* Decrease font size */
 		}
 	}
 
 	@media screen and (max-width: 600px) {
 		/* Adjust the parallax height for smaller screens */
-		.parallax2 {
-			height: 720px; /* Adjust the height as needed */
-		}
 
 		.calendar-button {
 			width: 200px; /* Decrease width */

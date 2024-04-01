@@ -48,7 +48,7 @@
 	}
 
 	.layout {
-		min-width: 300px; /* Prevent the main content from shrinking under 400px */
+		min-width: 500px; /* Prevent the main content from shrinking under 400px */
 	}
 
 	main {

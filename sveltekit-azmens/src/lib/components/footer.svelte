@@ -21,7 +21,8 @@
 
 <style>
 	footer {
-		min-width: 300px;
+		min-width: 500px;
+		flex-shrink: 0;
 	}
 
 	.breadcrumb1 {

@@ -9,62 +9,53 @@
 	<!-- Breadcrumb content goes here -->
 </div>
 
-<div class="container">
-	<div class="card">
-		<p>
-			<strong>Email:</strong>
-			<a
-				href="mailto:
+<body>
+	<div class="container">
+		<div class="card">
+			<h1>Send us a message</h1>
 
-			"
-			>
-				<!-- Email address goes here -->
-			</a>
-		</p>
-
-		<h1>Send us a message</h1>
-
-		<form class="form-container">
-			<div class="text">
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" required />
-
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required />
-
-				<label for="message">Message:</label>
-				<textarea id="message" name="message" required rows="5"></textarea>
-
-				<button type="submit">Send</button>
-			</div>
-		</form>
+			<h2>Email: example@example.com</h2>
+		</div>
 	</div>
-</div>
+</body>
 
 <style>
 	/* Add the following styles */
 
-	.container {
-		margin: 0 auto;
-		margin-top: 50px;
-		max-width: 900px;
-	}
-	.form-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		max-width: 500px;
-		margin: 0 auto;
+	body {
+		/* Existing styles... */
+		font-size: 1em; /* Set a base font size */
 	}
 
-	.form-container label,
-	.form-container input,
-	.form-container textarea,
-	.form-container button {
-		width: 100%;
-		margin-bottom: 10px;
-		box-sizing: border-box;
+	h1 {
+		text-align: center;
+		margin: 20px 0;
+		color: #222831;
+		font-size: 2em;
+	}
+
+	h2 {
+		text-align: center;
+		margin: 20px 0;
+		color: #30475e;
+		font-size: 1.6em;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		margin: 0;
+		padding: 0;
+		font-family: 'Arial', sans-serif;
+		font-size: 1em;
+	}
+
+	.container {
+		margin: 0 auto;
+		min-width: 200px;
+		margin-top: 100px;
+		margin-bottom: 100px;
 	}
 
 	.card {
@@ -83,7 +74,7 @@
 	}
 
 	.pageHeader {
-		padding: 100px 0;
+		padding: 50px 0;
 	}
 
 	.pageHeaderTitle {
@@ -109,6 +100,18 @@
 	@media screen and (min-width: 1201px) {
 		.pageHeaderTitle {
 			font-size: 3vw; /* Decrease font size on large screens */
+		}
+	}
+
+	@media (max-width: 900px) {
+		h1 {
+			font-size: 2.1em; /* Reduce the font size */
+		}
+	}
+
+	@media (max-width: 600px) {
+		h1 {
+			font-size: 2.3em; /* Further reduce the font size */
 		}
 	}
 </style>

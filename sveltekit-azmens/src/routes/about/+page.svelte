@@ -48,15 +48,29 @@
 
 <style>
 	/* Add the following styles */
+	.container {
+		margin: 0 auto; /* Center the container */
+		margin-bottom: 50px;
+		margin-top: 50px;
+		font-family: 'Arial', sans-serif;
+	}
+
+	.p {
+		margin-bottom: 20px; /* Add some space below the paragraph */
+		color: #30475e; /* Set the color of the paragraph */
+		font-size: 1em; /* Set the font size of the paragraph */
+	}
 
 	h2 {
-		color: #f05454; /* Set the color of the heading */
+		color: #222831; /* Set the color of the heading */
+		font-size: 1.5em; /* Set the font size of the heading */
 	}
 
 	h1 {
 		text-align: center; /* Center the heading */
 		margin: 20px 0; /* Add some space above and below the heading */
 		color: #222831;
+		font-size: 2em; /* Set the font size of the heading */
 	}
 
 	.card {
@@ -102,6 +116,7 @@
 
 	.card-item p {
 		margin-top: 10px; /* Add some space above the name */
+		color: #30475e;
 	}
 
 	.breadcrumb {
@@ -110,7 +125,7 @@
 	}
 
 	.pageHeader {
-		padding: 100px 0;
+		padding: 50px 0;
 	}
 
 	.pageHeaderTitle {
@@ -141,7 +156,7 @@
 
 	@media (max-width: 600px) {
 		.card-item {
-			width: 70%; /* Make each card item take up the full width of the card */
+			width: 60%; /* Make each card item take up the full width of the card */
 		}
 	}
 </style>

@@ -1,154 +1,140 @@
 <div class="events-container">
 	<div class="new-events">
-		<a href="http://www.mensregion1champ.com/">
-			<img src="/images/region1.jpg" alt="Slide 1" />
-		</a>
+		<img src="/images/region1.jpg" alt="Slide 1" />
 		<div class="event-text">
 			<p class="event-date">April 3 - 7</p>
-			<p class="event-title">2024 Men's Region 1 Championships​</p>
+			<a href="http://www.mensregion1champ.com/" class="event-title">
+				<p>2024 Men's Region 1 Championships​</p>
+			</a>
 			<p class="event-location">Mesa, Az.​</p>
 		</div>
 	</div>
 	<div class="new-events">
-		<a href="https://usagym.org/events/2024-mens-western-championships/">
-			<img src="/images/westerns3.jpg" alt="Slide 2" />
-		</a>
+		<img src="/images/westerns3.jpg" alt="Slide 2" />
 		<div class="event-text">
 			<p class="event-date">April 26 - 28</p>
-			<p class="event-title">2024 Men’s Western National Championships</p>
+			<a href="https://usagym.org/events/2024-mens-western-championships/" class="event-title">
+				<p>2024 Men’s Western National Championships</p>
+			</a>
 			<p class="event-location">Chandler, Az.</p>
 		</div>
 	</div>
 	<div class="new-events">
-		<a href="https://usagym.org/events/2024-mens-development-program-national-championships/">
-			<img src="/images/nationals2.jpg" alt="Slide 3" />
-		</a>
+		<img src="/images/nationals2.jpg" alt="Slide 3" />
 		<div class="event-text">
 			<p class="event-date">May 9 - 12</p>
-			<p class="event-title">2024 Men’s National Championships</p>
+			<a
+				href="https://usagym.org/events/2024-mens-development-program-national-championships/"
+				class="event-title"
+			>
+				<p>2024 Men’s National Championships</p>
+			</a>
 			<p class="event-location">Daytona Beach, Fl.</p>
 		</div>
 	</div>
 </div>
 
 <style>
-	.event-text p {
-		font-size: 1.5em;
-		margin-bottom: 1em; /* Adjust this value as needed */
-	}
-
-	.event-text p:last-child {
-		margin-bottom: 0; /* Remove margin-bottom from the last paragraph */
-	}
-
-	.event-location {
-		color: #222831; /* Set the color of the location */
-	}
-	.event-title {
-		font-size: 1.5em; /* Adjust this value as needed */
-		color: #30475e;
-		font-weight: bold; /* Add this line to increase the font weight */
-	}
-
-	.event-text {
-		padding: 30px; /* Add padding as needed */
-		border-top: 2px solid #30475e; /* Add a border to the top of the text */
-		background-color: #dddddd; /* Set the background color of the text area */
-	}
-
-	.event-date {
-		color: #f05454; /* Set the color of the date */
-	}
 	.events-container {
+		margin-top: 100px;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-
-	.events-container .card img {
-		width: 400px; /* Adjust this value as needed */
-		height: 200px; /* Adjust this value as needed */
-		object-fit: cover;
+		justify-content: center; /* Center the card items horizontally */
+		gap: 30px; /* Add some space between the card items */
+		margin: 0 auto; /* Center the container itself */
+		max-width: 1200px; /* Limit the width of the container */
+		margin-bottom: 50px;
+		font-family: 'Arial', sans-serif;
 	}
 
 	.new-events {
-		width: 30%; /* Initially set to occupy 30% of the container width */
-		margin: 20px 20px; /* Adjust this value as needed */
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadow for card effect */
-		border-radius: 5px; /* Rounded corners */
-		background-color: #dddddd; /* Card background color */
-		overflow: hidden; /* Ensures the image doesn't overflow the rounded corners */
-		display: flex; /* Use Flexbox */
-		flex-direction: column; /* Stack the children vertically */
+		margin-top: 60px;
+		width: 23%; /* Make each card item take up approximately a quarter of the container's width */
+		margin-bottom: 20px; /* Add some space below each card item */
+		text-align: center; /* Center the text */
+		color: #222831;
+		border: 1px solid #ccc; /* Add a border */
+		border-radius: 10px; /* Add rounded corners */
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Add a box shadow */
+		background-color: #dddddd;
 	}
 
 	.new-events img {
 		width: 100%;
 		height: auto;
-		object-fit: contain; /* Changed from cover to contain */
-		transition: transform 0.3s ease;
-		vertical-align: top; /* Add this line */
-		order: -1;
+		transition: none;
 	}
 
-	.new-events img:hover {
-		transform: scale(1.1); /* Add this line to scale the image on hover */
+	.event-text {
+		background-color: #dddddd;
+		padding: 10px;
+		font-size: 1em; /* Set a base font size */
 	}
 
-	@media (min-width: 1200px) {
+	.event-date {
+		font-weight: bold;
+		font-size: 1.2em;
+		color: #eb1b2d;
+	}
+
+	.event-title {
+		font-size: 1.2em;
+		color: #222831;
+		transition: color 0.3s ease;
+		text-decoration: none;
+	}
+
+	.event-title:hover {
+		color: #007bff; /* Change the color when hovered over */
+		text-decoration: underline; /* Add an underline when hovered over */
+	}
+
+	.event-location {
+		font-style: italic;
+		font-size: 1.2em;
+		color: #30475e;
+	}
+
+	@media (max-width: 700px) {
 		.events-container {
-			padding: 20px;
-			max-width: 1200px; /* This will prevent the container (and therefore the cards) from spreading beyond 1200px */
-			margin: 0 auto; /* Center the container */
+			gap: 0px; /* Reduce the space between the card items */
 		}
-
 		.new-events {
-			max-width: 400px; /* This will prevent the cards from growing beyond 400px */
-			margin: 20px auto; /* Center-align and adjust margin */
-		}
-	}
-
-	@media (min-width: 901px) and (max-width: 1199px) {
-		.new-events {
-			width: 35%;
+			width: 60%; /* Make each card item take up the full width of the card */
 		}
 
-		.events-container {
-			justify-content: center;
-			padding: 40px;
-		}
-	}
-
-	@media (max-width: 900px) {
-		.events-container {
-			justify-content: center;
-			padding: 40px;
+		.event-text,
+		.event-location {
+			font-size: 1.2em; /* Reduce the font size */
 		}
 
-		.new-events {
-			width: 55%;
-			margin: 20px auto;
+		.event-date {
+			font-size: 1.2em; /* Reduce the font size */
 		}
 
-		.event-text p {
-			font-size: 1.5em;
+		.event-title {
+			font-size: 1.5em; /* Reduce the font size */
 		}
 	}
 
 	@media (max-width: 600px) {
-		.events-container {
-			justify-content: center;
-			padding: 40px;
+		.event-text,
+		.event-location {
+			font-size: 1.1em; /* Further reduce the font size */
 		}
 
-		.new-events {
-			width: 90%;
-			min-width: 300px; /* This will prevent the cards from shrinking beyond 300px */
-			margin: 40px auto;
+		.event-date {
+			font-size: 1.1em; /* Further reduce the font size */
 		}
 
-		.event-text p {
-			font-size: 1.5em;
+		.event-title {
+			font-size: 1.4em; /* Further reduce the font size */
+		}
+	}
+
+	@media (max-width: 1200px) {
+		.event-title {
+			font-size: 1.3em; /* Reduce the font size */
 		}
 	}
 </style>
