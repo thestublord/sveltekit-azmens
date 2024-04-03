@@ -22,11 +22,6 @@
 <style>
 	/* Add the following styles */
 
-	body {
-		/* Existing styles... */
-		font-size: 1em; /* Set a base font size */
-	}
-
 	h1 {
 		text-align: center;
 		margin: 20px 0;
@@ -52,10 +47,11 @@
 	}
 
 	.container {
-		margin: 0 auto;
-		min-width: 200px;
-		margin-top: 100px;
-		margin-bottom: 100px;
+		display: flex;
+		justify-content: center; /* Center horizontally */
+		align-items: center; /* Center vertically */
+		height: 50vh; /* Take up the full height of the viewport */
+		margin: 0; /* Remove the top and bottom margins */
 	}
 
 	.card {
@@ -63,7 +59,7 @@
 		background-color: #dddddd;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 		border-radius: 10px;
-		max-width: 1200px;
+		max-width: 900px;
 		margin: 0 auto;
 		color: #000;
 	}
@@ -79,39 +75,9 @@
 
 	.pageHeaderTitle {
 		text-transform: uppercase;
-		font-size: 4vw; /* Responsive font size */
+		font-size: 2.7em; /* Responsive font size */
 		line-height: 1.1; /* Adjust line height */
 		color: #fff;
 		text-align: center;
-	}
-
-	@media screen and (max-width: 600px) {
-		.pageHeaderTitle {
-			font-size: 5vw; /* Increase font size on small screens */
-		}
-	}
-
-	@media screen and (min-width: 601px) and (max-width: 1200px) {
-		.pageHeaderTitle {
-			font-size: 4vw; /* Decrease font size on medium screens */
-		}
-	}
-
-	@media screen and (min-width: 1201px) {
-		.pageHeaderTitle {
-			font-size: 3vw; /* Decrease font size on large screens */
-		}
-	}
-
-	@media (max-width: 900px) {
-		h1 {
-			font-size: 2.1em; /* Reduce the font size */
-		}
-	}
-
-	@media (max-width: 600px) {
-		h1 {
-			font-size: 2.3em; /* Further reduce the font size */
-		}
 	}
 </style>

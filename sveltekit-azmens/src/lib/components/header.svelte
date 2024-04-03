@@ -29,16 +29,19 @@
 
 <body>
 	<header>
-		<div class="logo" on:click={() => navigateTo('/')}>AZMGA</div>
+		<div
+			class="logo"
+			on:click={() => navigateTo('/')}
+			on:keydown={(e) => {
+				if (e.key === 'Enter') navigateTo('/');
+			}}
+			role="button"
+			tabindex="0"
+		>
+			AZMGA
+		</div>
 		<nav>
 			<ul class="nav-links">
-				<li>
-					<button
-						type="button"
-						on:click={() => navigateTo('/events')}
-						on:keydown={() => navigateTo('/events')}>Events</button
-					>
-				</li>
 				<li>
 					<button
 						type="button"
@@ -46,20 +49,19 @@
 						on:keydown={() => navigateTo('/calendar')}>Calendar</button
 					>
 				</li>
+				<li>
+					<button
+						type="button"
+						on:click={() => navigateTo('/events')}
+						on:keydown={() => navigateTo('/events')}>Events</button
+					>
+				</li>
 				<li class="more">
-					<button type="button">More</button>
-					<ul class="submenu">
-						<button
-							type="button"
-							on:click={() => navigateTo('/contact')}
-							on:keydown={() => navigateTo('/contact')}>Contact</button
-						>
-						<button
-							type="button"
-							on:click={() => navigateTo('/about')}
-							on:keydown={() => navigateTo('/about')}>About</button
-						>
-					</ul>
+					<button
+						type="button"
+						on:click={() => navigateTo('/about')}
+						on:keydown={() => navigateTo('/about')}>About</button
+					>
 				</li>
 			</ul>
 		</nav>
@@ -77,9 +79,8 @@
 
 		<div class={showMenu ? 'popup-menu show' : 'popup-menu'}>
 			<ul>
-				<li><button on:click={() => navigateTo('/events')}>Events</button></li>
 				<li><button on:click={() => navigateTo('/calendar')}>Calendar</button></li>
-				<li><button on:click={() => navigateTo('/contact')}>Contact</button></li>
+				<li><button on:click={() => navigateTo('/events')}>Events</button></li>
 				<li><button on:click={() => navigateTo('/about')}>About</button></li>
 				<!-- Add more menu items as needed -->
 			</ul>
@@ -169,7 +170,7 @@
 			flex-direction: column;
 			cursor: pointer;
 			position: relative;
-			padding-right: 10px;
+			padding-right: 15px;
 		}
 
 		.hamburger .line {
@@ -213,7 +214,7 @@
 		}
 
 		.popup-menu {
-			padding-top: 110px; /* Add padding to the top */
+			padding-top: 30px; /* Add padding to the top */
 			position: fixed;
 			right: 0;
 			top: 50px; /* Height of the header */
@@ -227,8 +228,8 @@
 		}
 
 		.popup-menu button {
-			width: 300px; /* Adjust as needed */
-			height: 100px; /* Adjust as needed */
+			width: 200px; /* Adjust as needed */
+			height: 50px; /* Adjust as needed */
 			margin-top: 0; /* Remove the space above the button */
 			margin-bottom: 0; /* Remove the space below the button */
 			margin-left: auto;

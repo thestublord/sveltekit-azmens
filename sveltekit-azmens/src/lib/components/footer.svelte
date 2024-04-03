@@ -21,17 +21,15 @@
 
 <style>
 	footer {
-		min-width: 500px;
-		flex-shrink: 0;
+		height: auto;
 	}
-
 	.breadcrumb1 {
-		padding: 12px;
+		padding: 5px;
 		background-color: #222831;
 	}
 
 	.breadcrumb {
-		padding: 18px;
+		padding: 15px;
 		background-color: #30475e;
 		display: flex;
 		justify-content: space-between;
@@ -88,7 +86,7 @@
 		}
 
 		.breadcrumb-text {
-			font-size: 0.8em;
+			font-size: 0.7em;
 		}
 	}
 </style>

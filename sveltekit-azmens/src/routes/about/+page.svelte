@@ -10,44 +10,67 @@
 	<h1>AZMGA Committee</h1>
 	<div class="card-container">
 		<div class="card-item">
-			<img src="/images/blank.png" alt="Description of the image" />
+			<img src="/images/blank.png" alt="blank profile picture" />
 			<h2>President</h2>
 			<p>Clay Baimbridge</p>
 		</div>
 		<div class="card-item">
-			<img src="/images/blank.png" alt="Description of the image" />
+			<img src="/images/blank.png" alt="blank profile picture" />
 			<h2>Vice President</h2>
 			<p>Name</p>
 		</div>
 		<div class="card-item">
-			<img src="/images/blank.png" alt="Description of the image" />
+			<img src="/images/blank.png" alt="blank profile picture" />
 			<h2>Treasurer</h2>
 			<p>Name</p>
 		</div>
 		<div class="card-item">
-			<img src="/images/blank.png" alt="Description of the image" />
+			<img src="/images/blank.png" alt="blank profile picture" />
 			<h2>Secretary</h2>
 			<p>Name</p>
 		</div>
 	</div>
 
-	<h1>Our Mission</h1>
-	<div class="card">
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt
-			tincidunt. Nullam quis mauris nec nunc tincidunt tincidunt. Nullam quis mauris nec nunc
-			tincidunt tincidunt. Nullam quis mauris nec nunc tincidunt tincidunt. Nullam quis mauris nec
-			nunc tincidunt tincidunt. Nullam quis mauris nec nunc tincidunt tincidunt. Nullam quis mauris
-			nec nunc tincidunt tincidunt. Nullam quis mauris nec nunc tincidunt tincidunt. Nullam quis
-			mauris nec nunc tincidunt tincidunt. Nullam quis mauris nec nunc tincidunt tincidunt. Nullam
-			quis mauris nec nunc tincidunt tincidunt. Nullam quis mauris nec nunc tincidunt tincidunt.
-			Nullam quis mauris nec nunc tincidunt
-		</p>
+	<div class="container1">
+		<div class="card1">
+			<h1>Send us a message</h1>
+
+			<h2>Email: example@example.com</h2>
+		</div>
 	</div>
 </div>
 
 <style>
 	/* Add the following styles */
+
+	.card1 h1 {
+		font-size: 1.5em; /* Adjust as needed */
+		color: #222831;
+	}
+
+	.card1 h2 {
+		font-size: 1.2em; /* Adjust as needed */
+		color: #30475e;
+	}
+
+	.container1 {
+		display: flex;
+		justify-content: center; /* Center horizontally */
+		align-items: center; /* Center vertically */
+		margin: 0 auto;
+		max-width: 1200px;
+		margin-top: 60px;
+	}
+
+	.card1 {
+		padding: 20px;
+		background-color: #dddddd;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+		border-radius: 10px;
+
+		margin: 0 auto;
+		color: #222831;
+	}
 	.container {
 		margin: 0 auto; /* Center the container */
 		margin-bottom: 50px;
@@ -67,18 +90,6 @@
 		font-size: 2em; /* Set the font size of the heading */
 	}
 
-	.card {
-		padding: 20px;
-
-		border-radius: 10px; /* Rounded corners */
-
-		/* Other properties */
-		display: flex; /* Arrange the card items in a row */
-		flex-wrap: wrap; /* Allow the card items to wrap onto multiple lines */
-		justify-content: space-between; /* Add space between the card items */
-		color: #000;
-	}
-
 	.card-container {
 		display: flex;
 		flex-wrap: wrap;
@@ -93,7 +104,7 @@
 		margin-bottom: 20px; /* Add some space below each card item */
 		text-align: center; /* Center the text */
 		color: #000;
-		border: 1px solid #ccc; /* Add a border */
+
 		border-radius: 10px; /* Add rounded corners */
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Add a box shadow */
 		background-color: #dddddd;
@@ -115,7 +126,7 @@
 
 	.breadcrumb {
 		padding: 2px;
-		background-color: #f05454; /* Light grey background */
+		background-color: #dddddd; /* Light grey background */
 	}
 
 	.pageHeader {
@@ -124,33 +135,31 @@
 
 	.pageHeaderTitle {
 		text-transform: uppercase;
-		font-size: 4vw; /* Responsive font size */
-		line-height: 1.1; /* Adjust line height */
+		font-size: 2.7em; /* Responsive font size */
+
 		color: #fff;
 		text-align: center;
 	}
 
-	@media screen and (max-width: 600px) {
-		.pageHeaderTitle {
-			font-size: 6vw; /* Increase font size on small screens */
-		}
-	}
-
-	@media screen and (min-width: 601px) and (max-width: 1200px) {
-		.pageHeaderTitle {
-			font-size: 5vw; /* Decrease font size on medium screens */
-		}
-	}
-
-	@media screen and (min-width: 1201px) {
-		.pageHeaderTitle {
-			font-size: 3vw; /* Decrease font size on large screens */
+	@media (max-width: 400px) {
+		.card1 {
+			max-width: 80%; /* Set a maximum width for the card */
 		}
 	}
 
 	@media (max-width: 600px) {
 		.card-item {
 			width: 60%; /* Make each card item take up the full width of the card */
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		.pageHeaderTitle {
+			font-size: 2em; /* Reduced font size for smaller screens */
+		}
+
+		h1 {
+			font-size: 1.8em; /* Set the font size of the heading */
 		}
 	}
 </style>

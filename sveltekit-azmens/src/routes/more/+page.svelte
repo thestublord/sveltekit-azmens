@@ -1,50 +1,51 @@
-<div class="pageHeader" style="background-color: #30475e;">
-	<div class="div1300">
-		<div class="pageHeaderTitle">More</div>
-		<div class="belowPageHeaderTitle"></div>
+<div>
+	<div class="card">
+		<div class="card-content">
+			<img class="card-image" src="/images/region1.jpg" alt="Slide 1" />
+			<div class="event-text">
+				<p class="event-date">April 26 - 28</p>
+				<a href="https://usagym.org/events/2024-mens-western-championships/" class="event-title">
+					<p>2024 Men’s Western National Championships</p>
+				</a>
+				<p class="event-location">Chandler, Az.</p>
+			</div>
+		</div>
 	</div>
 </div>
 
-<div class="breadcrumb">
-	<!-- Breadcrumb content goes here -->
-</div>
-
-<div class="events-section"></div>
-
 <style>
-	/* Add the following styles */
-	.breadcrumb {
-		padding: 2px;
-		background-color: #f05454; /* Light grey background */
+	.card {
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		margin: 10px;
+		padding: 10px;
+		background-color: beige;
 	}
 
-	.pageHeader {
-		padding: 100px 0;
+	.card-content {
+		display: flex; /* Use Flexbox */
+		align-items: center; /* Center vertically */
 	}
 
-	.pageHeaderTitle {
-		text-transform: uppercase;
-		font-size: 4vw; /* Responsive font size */
-		line-height: 1.1; /* Adjust line height */
-		color: #fff;
-		text-align: center;
+	.card-image {
+		max-width: 30%; /* Adjust as needed */
+		height: auto;
+		margin-right: 0px; /* Space between the image and the text */
 	}
 
-	@media screen and (max-width: 600px) {
-		.pageHeaderTitle {
-			font-size: 5vw; /* Increase font size on small screens */
+	.event-date {
+		font-weight: bold;
+	}
+
+	/* When the screen is 600px or less, stack the image and text vertically */
+	@media (max-width: 600px) {
+		.card-content {
+			flex-direction: column;
 		}
-	}
 
-	@media screen and (min-width: 601px) and (max-width: 1200px) {
-		.pageHeaderTitle {
-			font-size: 4vw; /* Decrease font size on medium screens */
-		}
-	}
-
-	@media screen and (min-width: 1201px) {
-		.pageHeaderTitle {
-			font-size: 3vw; /* Decrease font size on large screens */
+		.card-image {
+			max-width: 100%;
+			margin-bottom: 10px; /* Space below the image */
 		}
 	}
 </style>

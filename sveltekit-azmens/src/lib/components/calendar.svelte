@@ -14,7 +14,7 @@
 
 <style>
 	.wrapper {
-		padding: 100px 30px 30px; /* top, right-left, bottom */
+		padding: 60px 10px 30px; /* top, right-left, bottom */
 		max-width: 1200px; /* Maximum width */
 		margin: auto; /* Center the container */
 	}

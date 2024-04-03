@@ -13,14 +13,16 @@
 	<!-- Breadcrumb content goes here -->
 </div>
 
-<Events />
+<div class="events-section">
+	<Events />
+</div>
 
 <style>
 	/* Add the following styles */
 
 	.breadcrumb {
 		padding: 2px;
-		background-color: #f05454; /* Light grey background */
+		background-color: #dddddd; /* Light grey background */
 	}
 
 	.pageHeader {
@@ -29,7 +31,7 @@
 
 	.pageHeaderTitle {
 		text-transform: uppercase;
-		font-size: 5vw; /* Responsive font size */
+		font-size: 2.7em; /* Responsive font size */
 		line-height: 1.1; /* Adjust line height */
 		color: #fff;
 		text-align: center;
@@ -37,19 +39,7 @@
 
 	@media screen and (max-width: 600px) {
 		.pageHeaderTitle {
-			font-size: 6vw; /* Increase font size on small screens */
-		}
-	}
-
-	@media screen and (min-width: 601px) and (max-width: 1200px) {
-		.pageHeaderTitle {
-			font-size: 5vw; /* Decrease font size on medium screens */
-		}
-	}
-
-	@media screen and (min-width: 1201px) {
-		.pageHeaderTitle {
-			font-size: 3vw; /* Decrease font size on large screens */
+			font-size: 2em; /* Reduced font size for smaller screens */
 		}
 	}
 </style>
